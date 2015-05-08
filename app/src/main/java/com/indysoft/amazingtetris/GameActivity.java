@@ -13,6 +13,7 @@ import android.view.MotionEvent;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -24,12 +25,26 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
     final int BOARD_HEIGHT = 800;
     final int BOARD_WIDTH = 400;
     final Handler handler = new Handler();
+    final Shape[] shapes = new Shape[7];
+    final int UP_DIRECTION = 0;
+    final int RIGHT_DIRECTION = 1;
+    final int DOWN_DIRECTION = 2;
+    final int LEFT_DIRECTION = 3;
+    int score;
+
+    final int dx[] = {-1, 0, 1, 0};
+    final int dy[] = {0, 1, 0, -1};
+
+    Random random = new Random();
+
     BoardCell[][] gameMatrix;
     Bitmap bitmap;
     Canvas canvas;
     Paint paint;
     LinearLayout linearLayout;
-    final Shape[] shapes = new Shape[7];
+
+    Shape currentShape;
+
 
     private void ShapesInit(){
         int[][] a = new int[5][5];
@@ -69,6 +84,174 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         a[1][3] = a[2][3] = a[3][2] = a[3][3] = 0;
 
     }
+    private boolean MoveShape(final int direction, Shape nowShape){
+        // copy the gameMatrix in aux
+        BoardCell[][] aux = gameMatrix;
+        int i, ii, j, jj;
+        // eliminate the shape from the table
+        for (ii = nowShape.x, i = 1; i <= 4; ++ i, ++ ii){
+            for (jj = nowShape.y, j = 1; j <= 4; ++ j, ++ jj){
+                if (nowShape.mat[i][j].getState() == 1){
+                    gameMatrix[ii][jj] = new BoardCell();
+                }
+            }
+        }
+
+        // try to move the shape to the specified direction
+        for (ii = nowShape.x + dx[direction], i = 1; i <= 4; ++ i, ++ ii){
+            for (jj = nowShape.y + dy[direction], j = 1; j <= 4; ++ j, ++ jj){
+                gameMatrix[ii][jj].setState(gameMatrix[ii][jj].getState() + nowShape.mat[i][j].getState());
+                if (nowShape.mat[i][j].getState() == 1){
+                    gameMatrix[ii][jj].setColor(nowShape.mat[i][j].getColor());
+                }
+                if (gameMatrix[ii][jj].getState() > 1){
+                    gameMatrix = aux;
+                    return false;
+                }
+            }
+        }
+        nowShape.x += dx[direction];
+        nowShape.y += dy[direction];
+        return true;
+    }
+    private boolean RotateLeft(Shape nowShape){
+        // copy the gameMatrix in aux
+        BoardCell[][] aux = gameMatrix;
+        int i, ii, j, jj;
+        // eliminate the shape from the gameMatrix
+        for (ii = nowShape.x, i = 1; i <= 4; ++ i, ++ ii){
+            for (jj = nowShape.y, j = 1; j <= 4; ++ j, ++ jj){
+                if (nowShape.mat[i][j].getState() == 1){
+                    gameMatrix[ii][jj] = new BoardCell();
+                }
+            }
+        }
+        // rotate the shape to left
+        nowShape.RotateLeft();
+        // ... and try to put it again on the table
+        for (ii = nowShape.x, i = 1; i <= 4; ++ i, ++ ii){
+            for (jj = nowShape.y, j = 1; j <= 4; ++ j, ++ jj){
+                gameMatrix[ii][jj].setState(gameMatrix[ii][jj].getState() + nowShape.mat[i][j].getState());
+                if (nowShape.mat[i][j].getState() == 1){
+                    gameMatrix[ii][jj].setColor(nowShape.mat[i][j].getColor());
+                }
+                // if we can't put the rotated shape on the table
+                if (gameMatrix[ii][jj].getState() > 1){
+                    // then recreate the initial state of the table
+                    gameMatrix = aux;
+                    // ... and rotate the shape to right, to obtain its initial state
+                    nowShape.RotateRight();
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    private boolean RotateRight(Shape nowShape){
+        // copy the gameMatrix in aux
+        BoardCell[][] aux = gameMatrix;
+        int i, ii, j, jj;
+        // eliminate the shape from the gameMatrix
+        for (ii = nowShape.x, i = 1; i <= 4; ++ i, ++ ii){
+            for (jj = nowShape.y, j = 1; j <= 4; ++ j, ++ jj){
+                if (nowShape.mat[i][j].getState() == 1){
+                    gameMatrix[ii][jj] = new BoardCell();
+                }
+            }
+        }
+        // rotate the shape to right
+        nowShape.RotateRight();
+        // ... and try to put it again on the table
+        for (ii = nowShape.x, i = 1; i <= 4; ++ i, ++ ii){
+            for (jj = nowShape.y, j = 1; j <= 4; ++ j, ++ jj){
+                gameMatrix[ii][jj].setState(gameMatrix[ii][jj].getState() + nowShape.mat[i][j].getState());
+                if (nowShape.mat[i][j].getState() == 1){
+                    gameMatrix[ii][jj].setColor(nowShape.mat[i][j].getColor());
+                }
+                // if we can't put the rotated shape on the table
+                if (gameMatrix[ii][jj].getState() > 1){
+                    // then recreate the initial state of the table
+                    gameMatrix = aux;
+                    // ... and rotate the shape to left, to obtain its initial state
+                    nowShape.RotateLeft();
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    private boolean CreateShape(){
+        // generate random shape to put on the gameMatrix
+        currentShape = shapes[random.nextInt(shapes.length)];
+        // generate random number of rotations
+        int number_of_rotations = random.nextInt(4);
+        for (int i = 1; i <= number_of_rotations; ++ i){
+            currentShape.RotateRight();
+        }
+        currentShape.x = 0; currentShape.y = 6;
+        // put the new generated shape adjacent to the top side of the table if possible
+        for(int offset = 0; offset <= 3; ++ offset){
+            int i, ii, j, jj;
+            boolean ok = true;
+            for (ii = currentShape.x + offset, i = 1; i <= 4; ++ i, ++ ii){
+                for (jj = currentShape.y, j = 1; j <= 4; ++ j, ++ jj){
+                    gameMatrix[ii][jj].setState(gameMatrix[ii][jj].getState() + currentShape.mat[i][j].getState());
+                    if (gameMatrix[ii][jj].getState() > 1){
+                        ok = false;
+                    }
+                }
+            }
+            if (ok){
+                for (i = 1, ii = currentShape.x + offset; i <= 4; ++ i, ++ ii){
+                    for (j = 1, jj = currentShape.y; j <= 4; ++ j, ++ jj){
+                        if (currentShape.mat[i][j].getState() == 1){
+                            gameMatrix[ii][jj].setColor(currentShape.mat[i][j].getColor());
+                        }
+                    }
+                }
+                currentShape.x += offset;
+                return true;
+            }
+            else{
+                for (ii = currentShape.x + offset, i = 1; i <= 4; ++ i, ++ ii){
+                    for (jj = currentShape.y, j = 1; j <= 4; ++ j, ++ jj){
+                        gameMatrix[ii][jj].setState(gameMatrix[ii][jj].getState() - currentShape.mat[i][j].getState());
+                    }
+                }
+            }
+        }
+        return false;
+    }
+    private boolean Check(){
+        int k = 0;
+        boolean found = false;
+        for (int i = NUM_ROWS - 4; i >= 3; -- i){
+            boolean ok = true;
+            for (int j = 3; j < NUM_COLUMNS - 3; ++ j){
+                if (gameMatrix[i][j].getState() == 0){
+                    ok = false;
+                }
+            }
+            if (ok){
+                ++ k;
+                found = true;
+                continue;
+            }
+            else{
+                for (int j = 3; j < NUM_COLUMNS-3; ++ j){
+                    gameMatrix[i-k][j] = gameMatrix[i][j];
+                }
+            }
+        }
+        for (int pas = 1; pas <= k; ++ pas){
+            for (int j = 3; j < NUM_COLUMNS - 3; ++ j){
+                gameMatrix[3 + pas - 1][j] = new BoardCell();
+            }
+        }
+        score += k * (k + 1) / 2;
+        return found;
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +262,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         canvas = new Canvas(bitmap);
         paint = new Paint();
         linearLayout = (LinearLayout) findViewById(R.id.game_board);
+        score = 0;
 
         ShapesInit();
 
@@ -148,21 +332,6 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 gameMatrix[i][j] = new BoardCell(1, Color.BLACK);
             }
         }
-
-        // Test
-        int i, ii, j, jj;
-        Shape testShape = shapes[3];
-        for (i = 1, ii = 3; i <= 4; ++ i, ++ ii){
-            for(j = 1, jj = 6; j <= 4; ++ j, ++ jj){
-                if (testShape.mat[i][j].getState() == 1){
-                    gameMatrix[ii][jj].setState(gameMatrix[ii][jj].getState() + testShape.mat[i][j].getState());
-                    gameMatrix[ii][jj].setColor(testShape.mat[i][j].getColor());
-                }
-            }
-        }
-
-
-
 
         // Paint the initial matrix (frontend)
         PaintMatrix();
@@ -266,13 +435,16 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
     }
 
     public class Shape{
+        public int x, y;
         public BoardCell[][] mat = new BoardCell[5][5];
+
         Shape(){
             for (int i = 0; i < 5; ++ i){
                 for (int j = 0; j < 5; ++ j){
                     mat[i][j] = new BoardCell();
                 }
             }
+            x = y = 0;
         }
 
         Shape(int[][] _mat, int _color) {
@@ -287,6 +459,23 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
                 }
             }
+            x = y = 0;
+        }
+
+        Shape(int[][] _mat, int _color, int _x, int _y){
+            for (int i = 0; i < 5; ++ i){
+                for (int j = 0; j < 5; ++ j){
+                    if (_mat[i][j] == 1) {
+                        mat[i][j] = new BoardCell(_mat[i][j], _color);
+                    }
+                    else{
+                        mat[i][j] = new BoardCell();
+                    }
+
+                }
+            }
+            x = _x;
+            y = _y;
         }
 
         void RotateLeft(){

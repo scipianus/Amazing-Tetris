@@ -42,24 +42,38 @@
       <file leaf-file-name="GameActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/GameActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.040219378" vertical-offset="1730" max-vertical-offset="6192">
-              <caret line="110" column="74" selection-start-line="110" selection-start-column="74" selection-end-line="110" selection-end-column="74" />
+            <state vertical-scroll-proportion="1.3948811" vertical-offset="1373" max-vertical-offset="2496">
+              <caret line="400" column="39" selection-start-line="400" selection-start-column="39" selection-end-line="400" selection-end-column="39" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-                <element signature="e#5819#6341#0" expanded="true" />
-                <element signature="e#6330#6331#0" expanded="true" />
-                <element signature="e#6500#6501#0" expanded="true" />
-                <element signature="e#6528#6529#0" expanded="true" />
-                <element signature="e#6591#6592#0" expanded="true" />
-                <element signature="e#6619#6620#0" expanded="true" />
-                <element signature="e#6687#6688#0" expanded="true" />
-                <element signature="e#6715#6716#0" expanded="true" />
-                <element signature="e#6773#6774#0" expanded="true" />
-                <element signature="e#6801#6802#0" expanded="true" />
-                <element signature="e#6933#6934#0" expanded="true" />
-                <element signature="e#6961#6962#0" expanded="true" />
+                <element signature="method#MoveShape#0;class#GameActivity#0" expanded="false" />
+                <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
+                <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
+                <element signature="method#CreateShape#0;class#GameActivity#0" expanded="false" />
+                <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
+                <element signature="method#onCreate#0;class#GameActivity#0" expanded="false" />
+                <element signature="method#PaintMatrix#0;class#GameActivity#0" expanded="false" />
+                <element signature="method#GameInit#0;class#GameActivity#0" expanded="false" />
+                <element signature="e#12583#13105#0" expanded="true" />
+                <element signature="e#12733#13079#0" expanded="true" />
+                <element signature="e#13060#13061#0" expanded="true" />
+                <element signature="e#13094#13095#0" expanded="true" />
+                <element signature="e#13264#13265#0" expanded="true" />
+                <element signature="e#13292#13293#0" expanded="true" />
+                <element signature="e#13355#13356#0" expanded="true" />
+                <element signature="e#13383#13384#0" expanded="true" />
+                <element signature="e#13451#13452#0" expanded="true" />
+                <element signature="e#13479#13480#0" expanded="true" />
+                <element signature="e#13537#13538#0" expanded="true" />
+                <element signature="e#13565#13566#0" expanded="true" />
+                <element signature="e#13697#13698#0" expanded="true" />
+                <element signature="e#13725#13726#0" expanded="true" />
                 <element signature="class#BoardCell#0;class#GameActivity#0" expanded="false" />
+                <element signature="class#Shape#0;class#GameActivity#0" expanded="false" />
+                <element signature="method#Shape#0;class#Shape#0;class#GameActivity#0" expanded="false" />
+                <element signature="method#Shape#1;class#Shape#0;class#GameActivity#0" expanded="false" />
+                <element signature="method#RotateLeft#0;class#Shape#0;class#GameActivity#0" expanded="false" />
+                <element signature="method#RotateRight#0;class#Shape#0;class#GameActivity#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -834,7 +848,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="AndroidView" proportions="" version="1">
@@ -849,9 +863,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -975,10 +987,6 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amazingtetris" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1014,6 +1022,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1062,6 +1072,27 @@
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
@@ -1197,7 +1228,6 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1220,6 +1250,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1246,6 +1277,44 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/GameActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7704">
+          <caret line="110" column="51" selection-start-line="110" selection-start-column="51" selection-end-line="110" selection-end-column="51" />
+          <folding>
+            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#MoveShape#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#CreateShape#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#onCreate#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#PaintMatrix#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#GameInit#0;class#GameActivity#0" expanded="false" />
+            <element signature="e#12583#13105#0" expanded="true" />
+            <element signature="e#12733#13079#0" expanded="true" />
+            <element signature="e#13060#13061#0" expanded="true" />
+            <element signature="e#13094#13095#0" expanded="true" />
+            <element signature="e#13264#13265#0" expanded="true" />
+            <element signature="e#13292#13293#0" expanded="true" />
+            <element signature="e#13355#13356#0" expanded="true" />
+            <element signature="e#13383#13384#0" expanded="true" />
+            <element signature="e#13451#13452#0" expanded="true" />
+            <element signature="e#13479#13480#0" expanded="true" />
+            <element signature="e#13537#13538#0" expanded="true" />
+            <element signature="e#13565#13566#0" expanded="true" />
+            <element signature="e#13697#13698#0" expanded="true" />
+            <element signature="e#13725#13726#0" expanded="true" />
+            <element signature="class#BoardCell#0;class#GameActivity#0" expanded="false" />
+            <element signature="class#Shape#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#Shape#0;class#Shape#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#Shape#1;class#Shape#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#RotateLeft#0;class#Shape#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#RotateRight#0;class#Shape#0;class#GameActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="871">
@@ -1280,7 +1349,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29217392" vertical-offset="0" max-vertical-offset="575">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1288,30 +1356,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20869565" vertical-offset="0" max-vertical-offset="575">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/GameActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.040219378" vertical-offset="1730" max-vertical-offset="6192">
-          <caret line="110" column="74" selection-start-line="110" selection-start-column="74" selection-end-line="110" selection-end-column="74" />
+        <state vertical-scroll-proportion="1.3948811" vertical-offset="1373" max-vertical-offset="2496">
+          <caret line="400" column="39" selection-start-line="400" selection-start-column="39" selection-end-line="400" selection-end-column="39" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#5819#6341#0" expanded="true" />
-            <element signature="e#6330#6331#0" expanded="true" />
-            <element signature="e#6500#6501#0" expanded="true" />
-            <element signature="e#6528#6529#0" expanded="true" />
-            <element signature="e#6591#6592#0" expanded="true" />
-            <element signature="e#6619#6620#0" expanded="true" />
-            <element signature="e#6687#6688#0" expanded="true" />
-            <element signature="e#6715#6716#0" expanded="true" />
-            <element signature="e#6773#6774#0" expanded="true" />
-            <element signature="e#6801#6802#0" expanded="true" />
-            <element signature="e#6933#6934#0" expanded="true" />
-            <element signature="e#6961#6962#0" expanded="true" />
+            <element signature="method#MoveShape#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#CreateShape#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#onCreate#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#PaintMatrix#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#GameInit#0;class#GameActivity#0" expanded="false" />
+            <element signature="e#12583#13105#0" expanded="true" />
+            <element signature="e#12733#13079#0" expanded="true" />
+            <element signature="e#13060#13061#0" expanded="true" />
+            <element signature="e#13094#13095#0" expanded="true" />
+            <element signature="e#13264#13265#0" expanded="true" />
+            <element signature="e#13292#13293#0" expanded="true" />
+            <element signature="e#13355#13356#0" expanded="true" />
+            <element signature="e#13383#13384#0" expanded="true" />
+            <element signature="e#13451#13452#0" expanded="true" />
+            <element signature="e#13479#13480#0" expanded="true" />
+            <element signature="e#13537#13538#0" expanded="true" />
+            <element signature="e#13565#13566#0" expanded="true" />
+            <element signature="e#13697#13698#0" expanded="true" />
+            <element signature="e#13725#13726#0" expanded="true" />
             <element signature="class#BoardCell#0;class#GameActivity#0" expanded="false" />
+            <element signature="class#Shape#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#Shape#0;class#Shape#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#Shape#1;class#Shape#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#RotateLeft#0;class#Shape#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#RotateRight#0;class#Shape#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
