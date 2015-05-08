@@ -7,7 +7,12 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class GameActivity extends Activity {
@@ -17,6 +22,7 @@ public class GameActivity extends Activity {
     final int NUM_COLUMNS = 10;
     final int BOARD_HEIGHT = 800;
     final int BOARD_WIDTH = 400;
+    final Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,5 +56,24 @@ public class GameActivity extends Activity {
         // Display the current painting
         LinearLayout ll = (LinearLayout) findViewById(R.id.game_board);
         ll.setBackgroundDrawable(new BitmapDrawable(bg));
+
+        // Set a timer
+        Timer timer = new Timer();
+        TimerTask timerTask = new TimerTask() {
+            @Override
+            public void run() {
+
+                //Perform background work here
+
+                handler.post(new Runnable() {
+                    public void run() {
+                        //Perform GUI updation work here
+                        Toast toast = Toast.makeText(getApplicationContext(), "Timer working", Toast.LENGTH_SHORT);
+                        toast.show();
+                    }
+                });
+            }
+        };
+        timer.schedule(timerTask, 10, 3000);
     }
 }
