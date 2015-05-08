@@ -14,9 +14,9 @@ public class GameActivity extends Activity {
 
     int[][] gameMatrix;
     final int NUM_ROWS = 20;
-    final int NUM_COLUMNS = 12;
+    final int NUM_COLUMNS = 10;
     final int BOARD_HEIGHT = 800;
-    final int BOARD_WIDTH = 480;
+    final int BOARD_WIDTH = 400;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +34,11 @@ public class GameActivity extends Activity {
         Canvas canvas = new Canvas(bg);
         Paint paint = new Paint();
 
+        // Paint the game board background
         paint.setColor(Color.BLACK);
         canvas.drawRect(0, 0, BOARD_WIDTH, BOARD_HEIGHT, paint);
 
+        // Paint the grid on the game board
         paint.setColor(Color.WHITE);
         for (int i = 0; i <= NUM_ROWS; ++i) {
             canvas.drawLine(0, i * (BOARD_HEIGHT / NUM_ROWS), BOARD_WIDTH, i * (BOARD_HEIGHT / NUM_ROWS), paint);
@@ -45,7 +47,7 @@ public class GameActivity extends Activity {
             canvas.drawLine(i * (BOARD_WIDTH / NUM_COLUMNS), 0, i * (BOARD_WIDTH / NUM_COLUMNS), BOARD_HEIGHT, paint);
         }
 
-
+        // Display the current painting
         LinearLayout ll = (LinearLayout) findViewById(R.id.game_board);
         ll.setBackgroundDrawable(new BitmapDrawable(bg));
     }
