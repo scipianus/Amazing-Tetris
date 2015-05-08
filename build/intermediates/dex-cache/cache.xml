@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/classes.jar"
+        jar="E:\Android Club\Amazing-Tetris-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
-        <dex dex="/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/pre-dexed/debug/classes-ce7814b5cb981c8c3ba127060fdda47aa771a7ad.jar" />
+        <dex dex="E:\Android Club\Amazing-Tetris-master\app\build\intermediates\pre-dexed\debug\classes-4bbf39abdaf1a9d808bc79bd7c1ef764e58090d6.jar" />
     </item>
     <item
-        jar="/home/ciprian/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
-        <dex dex="/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/pre-dexed/debug/support-annotations-22.1.1-438d5fa195cc63d38c36e6af35132b9f3a090d76.jar" />
-    </item>
-    <item
-        jar="/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/libs/internal_impl-22.1.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
-        <dex dex="/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-0744a20393bf197617f0c70c9e90df7434d027ac.jar" />
-    </item>
-    <item
-        jar="/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/classes.jar"
+        jar="E:\Android Club\Amazing-Tetris-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/pre-dexed/debug/classes-5c38d89af1e417779a30fa8e2b29ea11e945cd7d.jar" />
+        <dex dex="E:\Android Club\Amazing-Tetris-master\app\build\intermediates\pre-dexed\debug\classes-e0af2a20e6bac698c31708aa6d6a7cab44984c2a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mircea\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="E:\Android Club\Amazing-Tetris-master\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-6d25a849f0d0daf63e0d5405524a79397f7840b0.jar" />
+    </item>
+    <item
+        jar="E:\Android Club\Amazing-Tetris-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\libs\internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="E:\Android Club\Amazing-Tetris-master\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-b643ca33a9c0164e904a5b967e029b1c8aef2792.jar" />
     </item>
 
 </items>

@@ -19,8 +19,8 @@ import java.util.TimerTask;
 
 public class GameActivity extends Activity implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener {
 
-    final int NUM_ROWS = 20;
-    final int NUM_COLUMNS = 10;
+    final int NUM_ROWS = 26;
+    final int NUM_COLUMNS = 16;
     final int BOARD_HEIGHT = 800;
     final int BOARD_WIDTH = 400;
     final Handler handler = new Handler();
@@ -29,6 +29,46 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
     Canvas canvas;
     Paint paint;
     LinearLayout linearLayout;
+    final Shape[] shapes = new Shape[7];
+
+    private void ShapesInit(){
+        int[][] a = new int[5][5];
+
+        for (int i = 0; i < 5; ++ i){
+            for (int j = 0; j < 5; ++ j){
+                a[i][j] = 0;
+            }
+        }
+
+        a[1][2] = a[1][3] = a[2][3] = a[3][3] = 1;
+        shapes[0] = new Shape(a, Color.rgb(187, 255, 0));
+        a[1][2] = a[1][3] = a[2][3] = a[3][3] = 0;
+
+        a[2][1] = a[2][2] = a[3][2] = a[3][3] = 1;
+        shapes[1] = new Shape(a, Color.rgb(200, 0, 255));
+        a[2][1] = a[2][2] = a[3][2] = a[3][3] = 0;
+
+        a[1][2] = a[2][2] = a[3][2] = a[4][2] = 1;
+        shapes[2] = new Shape(a, Color.rgb(0, 28, 196));
+        a[1][2] = a[2][2] = a[3][2] = a[4][2] = 0;
+
+        a[2][2] = a[2][3] = a[3][2] = a[3][3] = 1;
+        shapes[3] = new Shape(a, Color.rgb(227, 235, 0));
+        a[2][2] = a[2][3] = a[3][2] = a[3][3] = 0;
+
+        a[1][2] = a[2][2] = a[2][3] = a[3][2] = 1;
+        shapes[4] = new Shape(a, Color.rgb(235, 0, 0));
+        a[1][2] = a[2][2] = a[2][3] = a[3][2] = 0;
+
+        a[1][2] = a[2][2] = a[2][3] = a[3][3] = 1;
+        shapes[5] = new Shape(a, Color.rgb(255, 170, 0));
+        a[1][2] = a[2][2] = a[2][3] = a[3][3] = 0;
+
+        a[1][3] = a[2][3] = a[3][2] = a[3][3] = 1;
+        shapes[6] = new Shape(a, Color.rgb(0, 138, 44));
+        a[1][3] = a[2][3] = a[3][2] = a[3][3] = 0;
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +80,9 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         paint = new Paint();
         linearLayout = (LinearLayout) findViewById(R.id.game_board);
 
-        GameInit();
+        ShapesInit();
 
+        GameInit();
     }
 
     void PaintMatrix() {
@@ -52,22 +93,22 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
         // Paint the grid on the game board
         paint.setColor(Color.WHITE);
-        for (int i = 0; i <= NUM_ROWS; ++i) {
-            canvas.drawLine(0, i * (BOARD_HEIGHT / NUM_ROWS), BOARD_WIDTH, i * (BOARD_HEIGHT / NUM_ROWS), paint);
+        for (int i = 0; i <= (NUM_ROWS - 6); ++i) {
+            canvas.drawLine(0, i * (BOARD_HEIGHT / (NUM_ROWS - 6)), BOARD_WIDTH, i * (BOARD_HEIGHT / (NUM_ROWS - 6)), paint);
         }
-        for (int i = 0; i <= NUM_COLUMNS; ++i) {
-            canvas.drawLine(i * (BOARD_WIDTH / NUM_COLUMNS), 0, i * (BOARD_WIDTH / NUM_COLUMNS), BOARD_HEIGHT, paint);
+        for (int i = 0; i <= (NUM_COLUMNS - 6); ++i) {
+            canvas.drawLine(i * (BOARD_WIDTH / (NUM_COLUMNS - 6)), 0, i * (BOARD_WIDTH / (NUM_COLUMNS - 6)), BOARD_HEIGHT, paint);
         }
 
         // Paint the tetris blocks
-        for (int i = 0; i < NUM_ROWS; ++i) {
-            for (int j = 0; j < NUM_COLUMNS; ++j) {
+        for (int i = 3; i < NUM_ROWS - 3; ++i) {
+            for (int j = 3; j < NUM_COLUMNS - 3; ++j) {
                 if (gameMatrix[i][j].getState() == 1) {
                     paint.setColor(gameMatrix[i][j].getColor());
-                    canvas.drawRect(j * (BOARD_WIDTH / NUM_COLUMNS),
-                            i * (BOARD_HEIGHT / NUM_ROWS),
-                            (j + 1) * (BOARD_WIDTH / NUM_COLUMNS),
-                            (i + 1) * (BOARD_HEIGHT / NUM_ROWS),
+                    canvas.drawRect((j - 3) * (BOARD_WIDTH / (NUM_COLUMNS - 6)),
+                            (i - 3) * (BOARD_HEIGHT / (NUM_ROWS - 6)),
+                            (j + 1 - 3) * (BOARD_WIDTH / (NUM_COLUMNS - 6)),
+                            (i + 1 - 3) * (BOARD_HEIGHT / (NUM_ROWS - 6)),
                             paint);
                 }
             }
@@ -87,6 +128,41 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 gameMatrix[i][j] = new BoardCell();
             }
         }
+
+        // Marking the first and the last 3 lines and columns as occupied.
+
+        for (int j = 0; j < NUM_COLUMNS; ++ j){
+            for (int i = 0; i <= 2; ++ i) {
+                gameMatrix[i][j] = new BoardCell(1, Color.BLACK);
+            }
+            for (int i = NUM_ROWS-3; i < NUM_ROWS; ++ i){
+                gameMatrix[i][j] = new BoardCell(1, Color.BLACK);
+            }
+        }
+
+        for (int i = 0; i < NUM_ROWS; ++ i){
+            for (int j = 0; j <= 2; ++ j) {
+                gameMatrix[i][j] = new BoardCell(1, Color.BLACK);
+            }
+            for (int j = NUM_COLUMNS - 3; j < NUM_COLUMNS; ++ j){
+                gameMatrix[i][j] = new BoardCell(1, Color.BLACK);
+            }
+        }
+
+        // Test
+        int i, ii, j, jj;
+        Shape testShape = shapes[3];
+        for (i = 1, ii = 3; i <= 4; ++ i, ++ ii){
+            for(j = 1, jj = 6; j <= 4; ++ j, ++ jj){
+                if (testShape.mat[i][j].getState() == 1){
+                    gameMatrix[ii][jj].setState(gameMatrix[ii][jj].getState() + testShape.mat[i][j].getState());
+                    gameMatrix[ii][jj].setColor(testShape.mat[i][j].getColor());
+                }
+            }
+        }
+
+
+
 
         // Paint the initial matrix (frontend)
         PaintMatrix();
@@ -186,6 +262,59 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
         public void setColor(int color) {
             this.color = color;
+        }
+    }
+
+    public class Shape{
+        public BoardCell[][] mat = new BoardCell[5][5];
+        Shape(){
+            for (int i = 0; i < 5; ++ i){
+                for (int j = 0; j < 5; ++ j){
+                    mat[i][j] = new BoardCell();
+                }
+            }
+        }
+
+        Shape(int[][] _mat, int _color) {
+            for (int i = 0; i < 5; ++ i){
+                for (int j = 0; j < 5; ++ j){
+                    if (_mat[i][j] == 1) {
+                        mat[i][j] = new BoardCell(_mat[i][j], _color);
+                    }
+                    else{
+                        mat[i][j] = new BoardCell();
+                    }
+
+                }
+            }
+        }
+
+        void RotateLeft(){
+            BoardCell[][] aux = new BoardCell[5][5];
+            for (int i = 1; i < 5; ++ i){
+                for (int j = 1; j < 5; ++ j){
+                    aux[4 - j + 1][i] = mat[i][j];
+                }
+            }
+            for (int i = 1; i < 5; ++ i){
+                for (int j = 1; j < 5; ++ j){
+                    mat[i][j] = aux[i][j];
+                }
+            }
+        }
+
+        void RotateRight(){
+            BoardCell[][] aux = new BoardCell[5][5];
+            for (int i = 1; i < 5; ++ i){
+                for (int j = 1; j < 5; ++ j){
+                    aux[j][4 - i + 1] = mat[i][j];
+                }
+            }
+            for (int i = 1; i < 5; ++ i){
+                for (int j = 1; j < 5; ++ j){
+                    mat[i][j] = aux[i][j];
+                }
+            }
         }
     }
 }
