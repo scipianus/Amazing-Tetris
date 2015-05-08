@@ -16,6 +16,16 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button newGameButton = (Button) findViewById(R.id.new_game_button);
+        newGameButton.setOnClickListener(
+                new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View view) {
+                        MainActivity.this.startActivity(new Intent(MainActivity.this, GameActivity.class));
+                    }
+                });
+
         Button highScoresButton = (Button) findViewById(R.id.high_scores_button);
         highScoresButton.setOnClickListener(
                 new View.OnClickListener() {
@@ -35,6 +45,7 @@ public class MainActivity extends ActionBarActivity {
                         MainActivity.this.startActivity(new Intent(MainActivity.this, AboutActivity.class));
                     }
                 });
+
     }
 
 

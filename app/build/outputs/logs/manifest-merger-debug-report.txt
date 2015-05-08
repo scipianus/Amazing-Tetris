@@ -45,14 +45,32 @@ activity#com.indysoft.amazingtetris.AboutActivity
 ADDED from AndroidManifest.xml:19:9
 	android:label
 		ADDED from AndroidManifest.xml:21:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:22:13
 	android:name
 		ADDED from AndroidManifest.xml:20:13
-activity#com.indysoft.amazingtetris.HighScoresActivity
-ADDED from AndroidManifest.xml:22:9
-	android:label
-		ADDED from AndroidManifest.xml:24:13
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from AndroidManifest.xml:23:13
+	android:value
+		ADDED from AndroidManifest.xml:25:17
 	android:name
-		ADDED from AndroidManifest.xml:23:13
+		ADDED from AndroidManifest.xml:24:17
+activity#com.indysoft.amazingtetris.HighScoresActivity
+ADDED from AndroidManifest.xml:27:9
+	android:label
+		ADDED from AndroidManifest.xml:29:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:30:13
+	android:name
+		ADDED from AndroidManifest.xml:28:13
+activity#com.indysoft.amazingtetris.GameActivity
+ADDED from AndroidManifest.xml:35:9
+	android:label
+		ADDED from AndroidManifest.xml:37:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:38:13
+	android:name
+		ADDED from AndroidManifest.xml:36:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:22.1.1:20:5

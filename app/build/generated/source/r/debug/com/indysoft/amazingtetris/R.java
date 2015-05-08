@@ -1511,7 +1511,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int aboutTextView=0x7f09004f;
-        public static final int about_button=0x7f090053;
+        public static final int about_button=0x7f090055;
         public static final int action_bar=0x7f090040;
         public static final int action_bar_activity_content=0x7f090000;
         public static final int action_bar_container=0x7f09003f;
@@ -1525,7 +1525,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f09003d;
         public static final int action_mode_bar_stub=0x7f09003c;
         public static final int action_mode_close_button=0x7f090025;
-        public static final int action_settings=0x7f090054;
+        public static final int action_settings=0x7f090056;
         public static final int activity_chooser_view_content=0x7f090026;
         public static final int alertTitle=0x7f090030;
         public static final int always=0x7f090016;
@@ -1545,8 +1545,10 @@ containing a value of this type.
         public static final int end=0x7f090014;
         public static final int expand_activities_button=0x7f090027;
         public static final int expanded_menu=0x7f090037;
-        public static final int highScoresTextView=0x7f090050;
-        public static final int high_scores_button=0x7f090052;
+        public static final int game_board=0x7f090050;
+        public static final int game_score_textview=0x7f090051;
+        public static final int highScoresTextView=0x7f090052;
+        public static final int high_scores_button=0x7f090054;
         public static final int home=0x7f090004;
         public static final int homeAsUp=0x7f09000d;
         public static final int icon=0x7f09002b;
@@ -1557,7 +1559,7 @@ containing a value of this type.
         public static final int middle=0x7f090015;
         public static final int multiply=0x7f09001e;
         public static final int never=0x7f090019;
-        public static final int new_game_button=0x7f090051;
+        public static final int new_game_button=0x7f090053;
         public static final int none=0x7f09000e;
         public static final int normal=0x7f09000a;
         public static final int parentPanel=0x7f09002d;
@@ -1628,12 +1630,13 @@ containing a value of this type.
         public static final int abc_select_dialog_material=0x7f040017;
         public static final int abc_simple_dropdown_hint=0x7f040018;
         public static final int activity_about=0x7f040019;
-        public static final int activity_highscores=0x7f04001a;
-        public static final int activity_main=0x7f04001b;
-        public static final int select_dialog_item_material=0x7f04001c;
-        public static final int select_dialog_multichoice_material=0x7f04001d;
-        public static final int select_dialog_singlechoice_material=0x7f04001e;
-        public static final int support_simple_spinner_dropdown_item=0x7f04001f;
+        public static final int activity_game=0x7f04001a;
+        public static final int activity_highscores=0x7f04001b;
+        public static final int activity_main=0x7f04001c;
+        public static final int select_dialog_item_material=0x7f04001d;
+        public static final int select_dialog_multichoice_material=0x7f04001e;
+        public static final int select_dialog_singlechoice_material=0x7f04001f;
+        public static final int support_simple_spinner_dropdown_item=0x7f040020;
     }
     public static final class menu {
         public static final int menu_main=0x7f0d0000;
@@ -1663,10 +1666,11 @@ containing a value of this type.
         public static final int about_string=0x7f0b0012;
         public static final int action_settings=0x7f0b0013;
         public static final int app_name=0x7f0b0014;
-        public static final int hello_world=0x7f0b0015;
-        public static final int high_scores_button_text=0x7f0b0016;
-        public static final int high_scores_string=0x7f0b0017;
-        public static final int new_game_button_text=0x7f0b0018;
+        public static final int game_score_string=0x7f0b0015;
+        public static final int hello_world=0x7f0b0016;
+        public static final int high_scores_button_text=0x7f0b0017;
+        public static final int high_scores_string=0x7f0b0018;
+        public static final int new_game_button_text=0x7f0b0019;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0c0000;

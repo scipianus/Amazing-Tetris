@@ -196,6 +196,7 @@
     <string name="about_string">About the game</string>
     <string name="action_settings">Settings</string>
     <string name="app_name">Amazing Tetris</string>
+    <string name="game_score_string">Score: 0</string>
     <string name="hello_world">Hello world!</string>
     <string name="high_scores_button_text">High scores</string>
     <string name="high_scores_string">High Scores</string>
