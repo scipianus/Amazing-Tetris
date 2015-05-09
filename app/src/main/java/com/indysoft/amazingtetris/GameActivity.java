@@ -266,10 +266,9 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             if (ok) {
                 ++k;
                 found = true;
-                continue;
             } else {
                 for (int j = 3; j < NUM_COLUMNS - 3; ++j) {
-                    gameMatrix[i - k][j] = gameMatrix[i][j];
+                    gameMatrix[i + k][j] = new BoardCell(gameMatrix[i][j].getState(), gameMatrix[i][j].getColor());
                 }
             }
         }
@@ -363,6 +362,13 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             }
         }
 
+        if (!gameInProgess) {
+            paint.setColor(Color.WHITE);
+            paint.setTextAlign(Paint.Align.CENTER);
+            paint.setTextSize(60);
+            canvas.drawText("GAME OVER", (float) (BOARD_WIDTH / 2.0), (float) (BOARD_HEIGHT / 2.0), paint);
+        }
+
         // Display the current painting
         linearLayout.setBackgroundDrawable(new BitmapDrawable(bitmap));
 
@@ -405,11 +411,11 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         // Create an initial tetris block
         CreateShape();
 
-        // Paint the initial matrix (frontend)
-        PaintMatrix();
-
         // Start the game
         gameInProgess = true;
+
+        // Paint the initial matrix (frontend)
+        PaintMatrix();
 
         // Set a timer
         Timer timer = new Timer();
@@ -420,8 +426,8 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 //Perform background work here
                 boolean moved = MoveShape(DOWN_DIRECTION, currentShape);
                 if (!moved) {
-                    boolean created = CreateShape();
                     Check();
+                    boolean created = CreateShape();
                     if (!created)
                         gameInProgess = false;
                 }
@@ -431,29 +437,16 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                         PaintMatrix();
                         if (!gameInProgess)
                             cancel();
-                        //Log.v("TimerTAG", "Timer working");
                     }
                 });
             }
         };
-        timer.schedule(timerTask, 500, 750); // after x ms, it runs every y ms
+        timer.schedule(timerTask, 500, 500); // after x ms, it runs every y ms
     }
 
     @Override
     public boolean onSingleTapConfirmed(MotionEvent e) {
-        Display display = getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        float width = size.x;
-        float x = e.getX();
-        if (x <= width / 2.0) {
-            MoveShape(LEFT_DIRECTION, currentShape);
-            PaintMatrix();
-        } else {
-            MoveShape(RIGHT_DIRECTION, currentShape);
-            PaintMatrix();
-        }
-        return true;
+        return false;
     }
 
     @Override
@@ -478,7 +471,21 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     @Override
     public boolean onSingleTapUp(MotionEvent e) {
-        return false;
+        if (!gameInProgess)
+            return false;
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        float width = size.x;
+        float x = e.getX();
+        if (x <= width / 2.0) {
+            MoveShape(LEFT_DIRECTION, currentShape);
+            PaintMatrix();
+        } else {
+            MoveShape(RIGHT_DIRECTION, currentShape);
+            PaintMatrix();
+        }
+        return true;
     }
 
     @Override
@@ -488,11 +495,12 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     @Override
     public void onLongPress(MotionEvent e) {
-
     }
 
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+        if (!gameInProgess)
+            return false;
         try {
             if (Math.abs(e1.getY() - e2.getY()) > SWIPE_MAX_OFF_PATH)
                 return false;
