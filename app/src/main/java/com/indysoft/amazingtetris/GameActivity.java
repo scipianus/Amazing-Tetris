@@ -9,6 +9,7 @@ import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.view.GestureDetectorCompat;
 import android.view.Display;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -37,6 +38,11 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     final int dx[] = {-1, 0, 1, 0};
     final int dy[] = {0, 1, 0, -1};
+
+    private static final int SWIPE_MIN_DISTANCE = 120;
+    private static final int SWIPE_MAX_OFF_PATH = 250;
+    private static final int SWIPE_THRESHOLD_VELOCITY = 200;
+    private GestureDetectorCompat gestureDetector;
 
     Random random = new Random();
 
@@ -289,6 +295,9 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         linearLayout = (LinearLayout) findViewById(R.id.game_board);
         score = 0;
 
+        gestureDetector = new GestureDetectorCompat(this, this);
+        gestureDetector.setOnDoubleTapListener(this);
+
         ShapesInit();
 
         GameInit();
@@ -439,10 +448,11 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         float x = e.getX();
         if (x <= width / 2.0) {
             MoveShape(LEFT_DIRECTION, currentShape);
+            PaintMatrix();
         } else {
             MoveShape(RIGHT_DIRECTION, currentShape);
+            PaintMatrix();
         }
-        //Log.v("MotionEventTAG", "Event working");
         return true;
     }
 
@@ -483,7 +493,26 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-        return false;
+        try {
+            if (Math.abs(e1.getY() - e2.getY()) > SWIPE_MAX_OFF_PATH)
+                return false;
+            if (e1.getX() - e2.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+                RotateLeft(currentShape);
+                PaintMatrix();
+            } else if (e2.getX() - e1.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+                RotateRight(currentShape);
+                PaintMatrix();
+            }
+        } catch (Exception e) {
+            // nothing
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        gestureDetector.onTouchEvent(event);
+        return super.onTouchEvent(event);
     }
 
     public class BoardCell {
