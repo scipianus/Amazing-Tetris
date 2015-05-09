@@ -5,14 +5,15 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Display;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Random;
 import java.util.Timer;
@@ -32,6 +33,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
     final int DOWN_DIRECTION = 2;
     final int LEFT_DIRECTION = 3;
     int score;
+    boolean gameInProgess;
 
     final int dx[] = {-1, 0, 1, 0};
     final int dy[] = {0, 1, 0, -1};
@@ -86,9 +88,20 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     }
 
+    private void CopyMatrix(BoardCell[][] A, BoardCell[][] B) {
+        for (int i = 0; i < NUM_ROWS; ++i) {
+            for (int j = 0; j < NUM_COLUMNS; ++j) {
+                B[i][j] = new BoardCell(A[i][j].getState(), A[i][j].getColor());
+            }
+        }
+    }
+
     private boolean MoveShape(final int direction, Shape nowShape) {
         // copy the gameMatrix in aux
-        BoardCell[][] aux = gameMatrix;
+        BoardCell[][] aux = new BoardCell[NUM_ROWS][];
+        for (int i = 0; i < NUM_ROWS; ++i)
+            aux[i] = new BoardCell[NUM_COLUMNS];
+        CopyMatrix(gameMatrix, aux);
         int i, ii, j, jj;
         // eliminate the shape from the table
         for (ii = nowShape.x, i = 1; i <= 4; ++i, ++ii) {
@@ -107,7 +120,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                     gameMatrix[ii][jj].setColor(nowShape.mat[i][j].getColor());
                 }
                 if (gameMatrix[ii][jj].getState() > 1) {
-                    gameMatrix = aux;
+                    CopyMatrix(aux, gameMatrix);
                     return false;
                 }
             }
@@ -119,7 +132,10 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     private boolean RotateLeft(Shape nowShape) {
         // copy the gameMatrix in aux
-        BoardCell[][] aux = gameMatrix;
+        BoardCell[][] aux = new BoardCell[NUM_ROWS][];
+        for (int i = 0; i < NUM_ROWS; ++i)
+            aux[i] = new BoardCell[NUM_COLUMNS];
+        CopyMatrix(gameMatrix, aux);
         int i, ii, j, jj;
         // eliminate the shape from the gameMatrix
         for (ii = nowShape.x, i = 1; i <= 4; ++i, ++ii) {
@@ -141,7 +157,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 // if we can't put the rotated shape on the table
                 if (gameMatrix[ii][jj].getState() > 1) {
                     // then recreate the initial state of the table
-                    gameMatrix = aux;
+                    CopyMatrix(aux, gameMatrix);
                     // ... and rotate the shape to right, to obtain its initial state
                     nowShape.RotateRight();
                     return false;
@@ -153,7 +169,10 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     private boolean RotateRight(Shape nowShape) {
         // copy the gameMatrix in aux
-        BoardCell[][] aux = gameMatrix;
+        BoardCell[][] aux = new BoardCell[NUM_ROWS][];
+        for (int i = 0; i < NUM_ROWS; ++i)
+            aux[i] = new BoardCell[NUM_COLUMNS];
+        CopyMatrix(gameMatrix, aux);
         int i, ii, j, jj;
         // eliminate the shape from the gameMatrix
         for (ii = nowShape.x, i = 1; i <= 4; ++i, ++ii) {
@@ -175,7 +194,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 // if we can't put the rotated shape on the table
                 if (gameMatrix[ii][jj].getState() > 1) {
                     // then recreate the initial state of the table
-                    gameMatrix = aux;
+                    CopyMatrix(aux, gameMatrix);
                     // ... and rotate the shape to left, to obtain its initial state
                     nowShape.RotateLeft();
                     return false;
@@ -255,8 +274,6 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         }
         // Update the score
         score += k * (k + 1) / 2;
-        TextView textView = (TextView) findViewById(R.id.game_score_textview);
-        textView.setText("Score: " + score);
         return found;
     }
 
@@ -275,8 +292,6 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         ShapesInit();
 
         GameInit();
-
-        CreateShape();
     }
 
     void PaintMatrix() {
@@ -341,6 +356,10 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
         // Display the current painting
         linearLayout.setBackgroundDrawable(new BitmapDrawable(bitmap));
+
+        // Update the score textview
+        TextView textView = (TextView) findViewById(R.id.game_score_textview);
+        textView.setText("Score: " + score);
     }
 
     void GameInit() {
@@ -374,8 +393,14 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             }
         }
 
+        // Create an initial tetris block
+        CreateShape();
+
         // Paint the initial matrix (frontend)
         PaintMatrix();
+
+        // Start the game
+        gameInProgess = true;
 
         // Set a timer
         Timer timer = new Timer();
@@ -384,23 +409,41 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             public void run() {
 
                 //Perform background work here
-
+                boolean moved = MoveShape(DOWN_DIRECTION, currentShape);
+                if (!moved) {
+                    boolean created = CreateShape();
+                    Check();
+                    if (!created)
+                        gameInProgess = false;
+                }
                 handler.post(new Runnable() {
                     public void run() {
                         //Perform GUI updation work here
                         PaintMatrix();
-                        Toast toast = Toast.makeText(getApplicationContext(), "Timer working", Toast.LENGTH_SHORT);
-                        toast.show();
+                        if (!gameInProgess)
+                            cancel();
+                        //Log.v("TimerTAG", "Timer working");
                     }
                 });
             }
         };
-        timer.schedule(timerTask, 10, 3000); // after 10ms, it runs every 3000ms
+        timer.schedule(timerTask, 500, 750); // after x ms, it runs every y ms
     }
 
     @Override
     public boolean onSingleTapConfirmed(MotionEvent e) {
-        return false;
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        float width = size.x;
+        float x = e.getX();
+        if (x <= width / 2.0) {
+            MoveShape(LEFT_DIRECTION, currentShape);
+        } else {
+            MoveShape(RIGHT_DIRECTION, currentShape);
+        }
+        //Log.v("MotionEventTAG", "Event working");
+        return true;
     }
 
     @Override
