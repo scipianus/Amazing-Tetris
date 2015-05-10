@@ -405,7 +405,7 @@ int drawable abc_textfield_search_default_mtrl_alpha 0x7f020039
 int drawable abc_textfield_search_material 0x7f02003a
 int drawable tetrislogo 0x7f02003b
 int id aboutTextView 0x7f09004f
-int id about_button 0x7f090055
+int id about_button 0x7f090058
 int id action_bar 0x7f090040
 int id action_bar_activity_content 0x7f090000
 int id action_bar_container 0x7f09003f
@@ -419,7 +419,7 @@ int id action_menu_presenter 0x7f090003
 int id action_mode_bar 0x7f09003d
 int id action_mode_bar_stub 0x7f09003c
 int id action_mode_close_button 0x7f090025
-int id action_settings 0x7f090057
+int id action_settings 0x7f090059
 int id activity_chooser_view_content 0x7f090026
 int id alertTitle 0x7f090030
 int id always 0x7f090016
@@ -442,19 +442,20 @@ int id expanded_menu 0x7f090037
 int id game_board 0x7f090050
 int id game_score_textview 0x7f090051
 int id highScoresTextView 0x7f090052
-int id high_scores_button 0x7f090054
+int id high_scores_button 0x7f090057
 int id home 0x7f090004
 int id homeAsUp 0x7f09000d
 int id icon 0x7f09002b
 int id ifRoom 0x7f090018
 int id image 0x7f090028
-int id imageView 0x7f090056
 int id listMode 0x7f090009
 int id list_item 0x7f09002a
+int id logoImageView 0x7f090053
 int id middle 0x7f090015
 int id multiply 0x7f09001e
+int id nameEditText 0x7f090055
 int id never 0x7f090019
-int id new_game_button 0x7f090053
+int id new_game_button 0x7f090056
 int id none 0x7f09000e
 int id normal 0x7f09000a
 int id parentPanel 0x7f09002d
@@ -490,6 +491,7 @@ int id title_template 0x7f09002f
 int id topPanel 0x7f09002e
 int id up 0x7f090008
 int id useLogo 0x7f090012
+int id welcomeTextView 0x7f090054
 int id withText 0x7f09001a
 int id wrap_content 0x7f09001d
 int integer abc_config_activityDefaultDur 0x7f0a0000
@@ -556,6 +558,7 @@ int string hello_world 0x7f0b0016
 int string high_scores_button_text 0x7f0b0017
 int string high_scores_string 0x7f0b0018
 int string new_game_button_text 0x7f0b0019
+int string welcome_string 0x7f0b001a
 int style AlertDialog_AppCompat 0x7f0c0000
 int style AlertDialog_AppCompat_Light 0x7f0c0001
 int style Animation_AppCompat_Dialog 0x7f0c0002

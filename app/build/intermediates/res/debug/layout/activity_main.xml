@@ -9,41 +9,68 @@
     tools:context=".MainActivity"
     android:background="#ff72abff">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logoImageView"
+        android:src="@drawable/tetrislogo"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/welcome_string"
+        android:id="@+id/welcomeTextView"
+        android:textSize="30dp"
+        android:layout_below="@+id/logoImageView"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text=""
+        android:ems="10"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/nameEditText"
+        android:layout_below="@+id/welcomeTextView"
+        android:layout_centerHorizontal="true" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/new_game_button_text"
         android:id="@+id/new_game_button"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="138dp"
-        android:textSize="20dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/high_scores_button_text"
-        android:id="@+id/high_scores_button"
+        android:layout_marginBottom="20dp"
         android:textSize="20dp"
+        android:layout_below="@+id/nameEditText"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/high_scores_button_text"
+        android:id="@+id/high_scores_button"
+        android:textSize="20dp"
+        android:layout_below="@+id/new_game_button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
         android:text="@string/about_button_text"
         android:id="@+id/about_button"
-        android:layout_marginTop="36dp"
         android:textSize="20dp"
         android:layout_below="@+id/high_scores_button"
         android:layout_centerHorizontal="true" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@drawable/tetrislogo"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
 </RelativeLayout>
 <!-- From: file:/home/ciprian/AndroidStudioProjects/AmazingTetris/app/src/main/res/layout/activity_main.xml -->
