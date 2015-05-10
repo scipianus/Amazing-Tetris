@@ -34,7 +34,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
     final int DOWN_DIRECTION = 2;
     final int LEFT_DIRECTION = 3;
     int score;
-    boolean gameInProgress;
+    boolean gameInProgress, gamePaused;
 
     final int dx[] = {-1, 0, 1, 0};
     final int dy[] = {0, 1, 0, -1};
@@ -313,6 +313,15 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         GameInit();
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (gameInProgress) {
+            gamePaused = true;
+            PaintMatrix();
+        }
+    }
+
     void PaintMatrix() {
 
         // Paint the game board background
@@ -378,6 +387,11 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             paint.setTextAlign(Paint.Align.CENTER);
             paint.setTextSize(60);
             canvas.drawText("GAME OVER", (float) (BOARD_WIDTH / 2.0), (float) (BOARD_HEIGHT / 2.0), paint);
+        } else if (gamePaused) {
+            paint.setColor(Color.WHITE);
+            paint.setTextAlign(Paint.Align.CENTER);
+            paint.setTextSize(60);
+            canvas.drawText("GAME PAUSED", (float) (BOARD_WIDTH / 2.0), (float) (BOARD_HEIGHT / 2.0), paint);
         }
 
         // Display the current painting
@@ -400,21 +414,25 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             public void run() {
 
                 //Perform background work here
-                boolean moved = MoveShape(DOWN_DIRECTION, currentShape);
-                if (!moved) {
-                    if (fastSpeedState == 2) // fast speed
-                    {
-                        fastSpeedState = 1; // to be changed to normal speed
-                        return;
+                if (gameInProgress && !gamePaused) {
+                    boolean moved = MoveShape(DOWN_DIRECTION, currentShape);
+                    if (!moved) {
+                        if (fastSpeedState == 2) // fast speed
+                        {
+                            fastSpeedState = 1; // to be changed to normal speed
+                            return;
+                        }
+                        Check();
+                        boolean created = CreateShape();
+                        if (!created)
+                            gameInProgress = false;
                     }
-                    Check();
-                    boolean created = CreateShape();
-                    if (!created)
-                        gameInProgress = false;
                 }
                 handler.post(new Runnable() {
                     public void run() {
                         //Perform GUI updation work here
+                        if (gameInProgress && gamePaused)
+                            return;
                         PaintMatrix();
                         if (!gameInProgress) {
                             cancel();
@@ -466,6 +484,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
         // Start the game
         gameInProgress = true;
+        gamePaused = false;
 
         // Paint the initial matrix (frontend)
         PaintMatrix();
@@ -482,7 +501,15 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     @Override
     public boolean onDoubleTap(MotionEvent e) {
-        return false;
+        if (!gameInProgress)
+            return false;
+        if (gamePaused)
+            gamePaused = false;
+        else {
+            gamePaused = true;
+            PaintMatrix();
+        }
+        return true;
     }
 
     @Override
@@ -502,7 +529,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     @Override
     public boolean onSingleTapUp(MotionEvent e) {
-        if (!gameInProgress)
+        if (!gameInProgress || gamePaused)
             return false;
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -532,7 +559,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-        if (!gameInProgress)
+        if (!gameInProgress || gamePaused)
             return false;
         try {
             float x1 = e1.getX();
@@ -543,7 +570,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
             double angle = getAngle(x1, y1, x2, y2);
 
-            if (inRange(angle, 45, 135)) {
+            if (fastSpeedState == 2 && inRange(angle, 45, 135)) {
                 // UP
                 // cancel the fast down movement
                 TimerInit(1);
