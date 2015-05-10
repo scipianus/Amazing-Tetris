@@ -543,6 +543,11 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 TimerInit(2);
                 timer.schedule(timerTask, 0, 50);
             }
+            if (fastSpeedState == 2 && e1.getY() - e2.getY() > SWIPE_MIN_DISTANCE && Math.abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
+                // cancel the fast down movement
+                TimerInit(1);
+                timer.schedule(timerTask, 0, 50);
+            }
             if (Math.abs(e1.getY() - e2.getY()) > SWIPE_MAX_OFF_PATH)
                 return false;
             if (e1.getX() - e2.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
