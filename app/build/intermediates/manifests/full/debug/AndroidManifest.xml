@@ -15,7 +15,9 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.indysoft.amazingtetris.MainActivity"
-            android:label="@string/app_name" >
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,24 +26,30 @@
         </activity>
         <activity
             android:name="com.indysoft.amazingtetris.AboutActivity"
+            android:configChanges="orientation"
             android:label="@string/app_name"
-            android:parentActivityName="com.indysoft.amazingtetris.MainActivity" >
+            android:parentActivityName="com.indysoft.amazingtetris.MainActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.indysoft.amazingtetris.MainActivity" />
         </activity>
         <activity
             android:name="com.indysoft.amazingtetris.HighScoresActivity"
+            android:configChanges="orientation"
             android:label="@string/app_name"
-            android:parentActivityName="com.indysoft.amazingtetris.MainActivity" >
+            android:parentActivityName="com.indysoft.amazingtetris.MainActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.indysoft.amazingtetris.MainActivity" />
         </activity>
         <activity
             android:name="com.indysoft.amazingtetris.GameActivity"
+            android:configChanges="orientation"
             android:label="@string/app_name"
-            android:parentActivityName="com.indysoft.amazingtetris.MainActivity" >
+            android:parentActivityName="com.indysoft.amazingtetris.MainActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.indysoft.amazingtetris.MainActivity" />
