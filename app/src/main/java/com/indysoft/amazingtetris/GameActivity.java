@@ -39,9 +39,6 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
     final int dx[] = {-1, 0, 1, 0};
     final int dy[] = {0, 1, 0, -1};
 
-    private static final int SWIPE_MIN_DISTANCE = 120;
-    private static final int SWIPE_MAX_OFF_PATH = 250;
-    private static final int SWIPE_THRESHOLD_VELOCITY = 200;
     private GestureDetectorCompat gestureDetector;
 
     Random random = new Random();
@@ -538,27 +535,36 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         if (!gameInProgress)
             return false;
         try {
-            if (e2.getY() - e1.getY() > SWIPE_MIN_DISTANCE && Math.abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
-                // move fast down
-                TimerInit(2);
-                timer.schedule(timerTask, 0, 50);
-            }
-            if (fastSpeedState == 2 && e1.getY() - e2.getY() > SWIPE_MIN_DISTANCE && Math.abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
+            float x1 = e1.getX();
+            float y1 = e1.getY();
+
+            float x2 = e2.getX();
+            float y2 = e2.getY();
+
+            double angle = getAngle(x1, y1, x2, y2);
+
+            if (inRange(angle, 45, 135)) {
+                // UP
                 // cancel the fast down movement
                 TimerInit(1);
                 timer.schedule(timerTask, 0, 50);
-            }
-            if (Math.abs(e1.getY() - e2.getY()) > SWIPE_MAX_OFF_PATH)
-                return false;
-            if (e1.getX() - e2.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
-                // move left
-                MoveShape(LEFT_DIRECTION, currentShape);
-                PaintMatrix();
-            } else if (e2.getX() - e1.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+            } else if (inRange(angle, 0, 45) || inRange(angle, 315, 360)) {
+                // RIGHT
                 // move right
                 MoveShape(RIGHT_DIRECTION, currentShape);
                 PaintMatrix();
+            } else if (inRange(angle, 225, 315)) {
+                // DOWN
+                // move fast down
+                TimerInit(2);
+                timer.schedule(timerTask, 0, 50);
+            } else {
+                // LEFT
+                // move left
+                MoveShape(LEFT_DIRECTION, currentShape);
+                PaintMatrix();
             }
+
         } catch (Exception e) {
             // nothing
         }
@@ -569,6 +575,16 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
     public boolean onTouchEvent(MotionEvent event) {
         gestureDetector.onTouchEvent(event);
         return super.onTouchEvent(event);
+    }
+
+    public double getAngle(float x1, float y1, float x2, float y2) {
+
+        double rad = Math.atan2(y1 - y2, x2 - x1) + Math.PI;
+        return (rad * 180 / Math.PI + 180) % 360;
+    }
+
+    private boolean inRange(double angle, float init, float end) {
+        return (angle >= init) && (angle < end);
     }
 
     public class BoardCell {
