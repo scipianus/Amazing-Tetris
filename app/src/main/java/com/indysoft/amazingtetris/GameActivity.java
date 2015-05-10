@@ -34,7 +34,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
     final int DOWN_DIRECTION = 2;
     final int LEFT_DIRECTION = 3;
     int score;
-    boolean gameInProgess;
+    boolean gameInProgress;
 
     final int dx[] = {-1, 0, 1, 0};
     final int dy[] = {0, 1, 0, -1};
@@ -54,6 +54,9 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     Shape currentShape;
 
+    Timer timer;
+    TimerTask timerTask;
+    int fastSpeedState;
 
     private void ShapesInit() {
         int[][] a = new int[5][5];
@@ -306,6 +309,8 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         gestureDetector = new GestureDetectorCompat(this, this);
         gestureDetector.setOnDoubleTapListener(this);
 
+        timer = new Timer();
+
         ShapesInit();
 
         GameInit();
@@ -371,7 +376,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             }
         }
 
-        if (!gameInProgess) {
+        if (!gameInProgress) {
             paint.setColor(Color.WHITE);
             paint.setTextAlign(Paint.Align.CENTER);
             paint.setTextSize(60);
@@ -384,6 +389,48 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         // Update the score textview
         TextView textView = (TextView) findViewById(R.id.game_score_textview);
         textView.setText("Score: " + score);
+    }
+
+    void TimerInit(int mFastSpeedState) {
+        // fastSpeedState = 0 for normal speed
+        // fastSpeedState = 2 for fast speed
+        // fastSpeedState = 1 for fast speed to be changed in normal speed
+        timer.cancel();
+        timer = new Timer();
+        fastSpeedState = mFastSpeedState;
+        timerTask = new TimerTask() {
+            @Override
+            public void run() {
+
+                //Perform background work here
+                boolean moved = MoveShape(DOWN_DIRECTION, currentShape);
+                if (!moved) {
+                    if (fastSpeedState == 2) // fast speed
+                    {
+                        fastSpeedState = 1; // to be changed to normal speed
+                        return;
+                    }
+                    Check();
+                    boolean created = CreateShape();
+                    if (!created)
+                        gameInProgress = false;
+                }
+                handler.post(new Runnable() {
+                    public void run() {
+                        //Perform GUI updation work here
+                        PaintMatrix();
+                        if (!gameInProgress) {
+                            cancel();
+                            return;
+                        }
+                        if (fastSpeedState == 1) {
+                            TimerInit(0);
+                            timer.schedule(timerTask, 0, 500);
+                        }
+                    }
+                });
+            }
+        };
     }
 
     void GameInit() {
@@ -421,35 +468,13 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         CreateShape();
 
         // Start the game
-        gameInProgess = true;
+        gameInProgress = true;
 
         // Paint the initial matrix (frontend)
         PaintMatrix();
 
         // Set a timer
-        Timer timer = new Timer();
-        TimerTask timerTask = new TimerTask() {
-            @Override
-            public void run() {
-
-                //Perform background work here
-                boolean moved = MoveShape(DOWN_DIRECTION, currentShape);
-                if (!moved) {
-                    Check();
-                    boolean created = CreateShape();
-                    if (!created)
-                        gameInProgess = false;
-                }
-                handler.post(new Runnable() {
-                    public void run() {
-                        //Perform GUI updation work here
-                        PaintMatrix();
-                        if (!gameInProgess)
-                            cancel();
-                    }
-                });
-            }
-        };
+        TimerInit(0);
         timer.schedule(timerTask, 500, 500); // after x ms, it runs every y ms
     }
 
@@ -480,7 +505,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     @Override
     public boolean onSingleTapUp(MotionEvent e) {
-        if (!gameInProgess)
+        if (!gameInProgress)
             return false;
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -488,10 +513,12 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         float width = size.x;
         float x = e.getX();
         if (x <= width / 2.0) {
-            MoveShape(LEFT_DIRECTION, currentShape);
+            // rotate left
+            RotateLeft(currentShape);
             PaintMatrix();
         } else {
-            MoveShape(RIGHT_DIRECTION, currentShape);
+            // rotate right
+            RotateRight(currentShape);
             PaintMatrix();
         }
         return true;
@@ -508,16 +535,23 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-        if (!gameInProgess)
+        if (!gameInProgress)
             return false;
         try {
+            if (e2.getY() - e1.getY() > SWIPE_MIN_DISTANCE && Math.abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
+                // move fast down
+                TimerInit(2);
+                timer.schedule(timerTask, 0, 50);
+            }
             if (Math.abs(e1.getY() - e2.getY()) > SWIPE_MAX_OFF_PATH)
                 return false;
             if (e1.getX() - e2.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
-                RotateLeft(currentShape);
+                // move left
+                MoveShape(LEFT_DIRECTION, currentShape);
                 PaintMatrix();
             } else if (e2.getX() - e1.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
-                RotateRight(currentShape);
+                // move right
+                MoveShape(RIGHT_DIRECTION, currentShape);
                 PaintMatrix();
             }
         } catch (Exception e) {
