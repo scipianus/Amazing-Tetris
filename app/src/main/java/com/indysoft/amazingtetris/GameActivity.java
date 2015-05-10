@@ -570,11 +570,13 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
             double angle = getAngle(x1, y1, x2, y2);
 
-            if (fastSpeedState == 2 && inRange(angle, 45, 135)) {
+            if (inRange(angle, 45, 135)) {
                 // UP
                 // cancel the fast down movement
-                TimerInit(1);
-                timer.schedule(timerTask, 0, 50);
+                if (fastSpeedState == 2) {
+                    TimerInit(1);
+                    timer.schedule(timerTask, 0, 50);
+                }
             } else if (inRange(angle, 0, 45) || inRange(angle, 315, 360)) {
                 // RIGHT
                 // move right
