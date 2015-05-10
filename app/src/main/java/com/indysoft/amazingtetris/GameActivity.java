@@ -64,32 +64,39 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             }
         }
 
+        // L
         a[1][2] = a[1][3] = a[2][3] = a[3][3] = 1;
-        shapes[0] = new Shape(a, Color.rgb(187, 255, 0));
+        shapes[0] = new Shape(a, Color.rgb(255, 165, 0));
         a[1][2] = a[1][3] = a[2][3] = a[3][3] = 0;
 
+        // Z
         a[2][1] = a[2][2] = a[3][2] = a[3][3] = 1;
-        shapes[1] = new Shape(a, Color.rgb(200, 0, 255));
+        shapes[1] = new Shape(a, Color.RED);
         a[2][1] = a[2][2] = a[3][2] = a[3][3] = 0;
 
+        // I
         a[1][2] = a[2][2] = a[3][2] = a[4][2] = 1;
-        shapes[2] = new Shape(a, Color.rgb(0, 28, 196));
+        shapes[2] = new Shape(a, Color.CYAN);
         a[1][2] = a[2][2] = a[3][2] = a[4][2] = 0;
 
+        // O
         a[2][2] = a[2][3] = a[3][2] = a[3][3] = 1;
-        shapes[3] = new Shape(a, Color.rgb(227, 235, 0));
+        shapes[3] = new Shape(a, Color.YELLOW);
         a[2][2] = a[2][3] = a[3][2] = a[3][3] = 0;
 
+        // T
         a[1][2] = a[2][2] = a[2][3] = a[3][2] = 1;
-        shapes[4] = new Shape(a, Color.rgb(235, 0, 0));
+        shapes[4] = new Shape(a, Color.rgb(139, 0, 139));
         a[1][2] = a[2][2] = a[2][3] = a[3][2] = 0;
 
+        // S
         a[1][2] = a[2][2] = a[2][3] = a[3][3] = 1;
-        shapes[5] = new Shape(a, Color.rgb(255, 170, 0));
+        shapes[5] = new Shape(a, Color.rgb(0, 255, 0));
         a[1][2] = a[2][2] = a[2][3] = a[3][3] = 0;
 
+        // J
         a[1][3] = a[2][3] = a[3][2] = a[3][3] = 1;
-        shapes[6] = new Shape(a, Color.rgb(0, 138, 44));
+        shapes[6] = new Shape(a, Color.BLUE);
         a[1][3] = a[2][3] = a[3][2] = a[3][3] = 0;
 
     }
@@ -268,13 +275,15 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 found = true;
             } else {
                 for (int j = 3; j < NUM_COLUMNS - 3; ++j) {
-                    gameMatrix[i + k][j] = new BoardCell(gameMatrix[i][j].getState(), gameMatrix[i][j].getColor());
+                    int state = gameMatrix[i][j].getState();
+                    int color = gameMatrix[i][j].getColor();
+                    gameMatrix[i + k][j] = new BoardCell(state, color);
                 }
             }
         }
-        for (int pas = 1; pas <= k; ++pas) {
+        for (int pas = 0; pas < k; ++pas) {
             for (int j = 3; j < NUM_COLUMNS - 3; ++j) {
-                gameMatrix[3 + pas - 1][j] = new BoardCell();
+                gameMatrix[3 + pas][j] = new BoardCell();
             }
         }
         // Update the score
