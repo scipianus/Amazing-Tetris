@@ -23,8 +23,8 @@ import java.util.TimerTask;
 
 public class GameActivity extends Activity implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener {
 
-    final int NUM_ROWS = 26;
-    final int NUM_COLUMNS = 16;
+    final int NUM_ROWS = 36;
+    final int NUM_COLUMNS = 26;
     final int BOARD_HEIGHT = 800;
     final int BOARD_WIDTH = 400;
     final Handler handler = new Handler();
@@ -226,7 +226,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             currentShape.RotateRight();
         }
         currentShape.x = 0;
-        currentShape.y = 6;
+        currentShape.y = 1 + (NUM_COLUMNS - 6) / 2;
         // put the new generated shape adjacent to the top side of the table if possible
         for (int offset = 0; offset <= 3; ++offset) {
             int i, ii, j, jj;
