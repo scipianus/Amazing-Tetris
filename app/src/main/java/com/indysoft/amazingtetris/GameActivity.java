@@ -501,15 +501,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     @Override
     public boolean onDoubleTap(MotionEvent e) {
-        if (!gameInProgress)
-            return false;
-        if (gamePaused)
-            gamePaused = false;
-        else {
-            gamePaused = true;
-            PaintMatrix();
-        }
-        return true;
+        return false;
     }
 
     @Override
@@ -559,8 +551,6 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-        if (!gameInProgress || gamePaused)
-            return false;
         try {
             float x1 = e1.getX();
             float y1 = e1.getY();
@@ -572,24 +562,34 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
             if (inRange(angle, 45, 135)) {
                 // UP
-                // cancel the fast down movement
-                if (fastSpeedState == 2) {
-                    TimerInit(1);
-                    timer.schedule(timerTask, 0, 50);
+                // pause
+                if (!gameInProgress)
+                    return true;
+                if (gamePaused)
+                    gamePaused = false;
+                else {
+                    gamePaused = true;
+                    PaintMatrix();
                 }
             } else if (inRange(angle, 0, 45) || inRange(angle, 315, 360)) {
                 // RIGHT
                 // move right
+                if (!gameInProgress || gamePaused)
+                    return false;
                 MoveShape(RIGHT_DIRECTION, currentShape);
                 PaintMatrix();
             } else if (inRange(angle, 225, 315)) {
                 // DOWN
                 // move fast down
+                if (!gameInProgress || gamePaused)
+                    return false;
                 TimerInit(2);
                 timer.schedule(timerTask, 0, 50);
             } else {
                 // LEFT
                 // move left
+                if (!gameInProgress || gamePaused)
+                    return false;
                 MoveShape(LEFT_DIRECTION, currentShape);
                 PaintMatrix();
             }
