@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/E:/Android%20Club/Amazing-Tetris-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -149,11 +149,11 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/E:/Android%20Club/Amazing-Tetris-master/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/home/ciprian/AndroidStudioProjects/AmazingTetris/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/E:/Android%20Club/Amazing-Tetris-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
@@ -190,7 +190,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/E:/Android%20Club/Amazing-Tetris-master/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/ciprian/AndroidStudioProjects/AmazingTetris/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="about_button_text">About</string>
     <string name="about_string">About the game</string>
@@ -202,18 +202,18 @@
     <string name="high_scores_string">High Scores</string>
     <string name="new_game_button_text">New game</string>
     <string name="welcome_string">Welcome,</string>
-    <!-- From: file:/E:/Android%20Club/Amazing-Tetris-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/E:/Android%20Club/Amazing-Tetris-master/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/home/ciprian/AndroidStudioProjects/AmazingTetris/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
-    <!-- From: file:/E:/Android%20Club/Amazing-Tetris-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>

@@ -23,8 +23,8 @@ import java.util.TimerTask;
 
 public class GameActivity extends Activity implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener {
 
-    final int NUM_ROWS = 36;
-    final int NUM_COLUMNS = 26;
+    final int NUM_ROWS = 26;
+    final int NUM_COLUMNS = 16;
     final int BOARD_HEIGHT = 800;
     final int BOARD_WIDTH = 400;
     final Handler handler = new Handler();
