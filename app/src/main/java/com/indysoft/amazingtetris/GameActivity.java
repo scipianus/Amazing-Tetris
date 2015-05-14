@@ -558,6 +558,8 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+        if (!gameInProgress)
+            return false;
         try {
             float x1 = e1.getX();
             float y1 = e1.getY();
@@ -570,8 +572,6 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             if (inRange(angle, 45, 135)) {
                 // UP
                 // pause
-                if (!gameInProgress)
-                    return true;
                 if (gamePaused)
                     gamePaused = false;
                 else {
@@ -581,20 +581,20 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             } else if (inRange(angle, 0, 45) || inRange(angle, 315, 360)) {
                 // RIGHT
                 // move right
-                if (!gameInProgress || gamePaused)
+                if (gamePaused || !currentShapeAlive)
                     return false;
                 MoveShape(RIGHT_DIRECTION, currentShape);
                 PaintMatrix();
             } else if (inRange(angle, 225, 315)) {
                 // DOWN
                 // move fast down
-                if (!gameInProgress || gamePaused)
+                if (gamePaused || !currentShapeAlive)
                     return false;
                 ChangeFastSpeedState(true);
             } else {
                 // LEFT
                 // move left
-                if (!gameInProgress || gamePaused)
+                if (gamePaused || !currentShapeAlive)
                     return false;
                 MoveShape(LEFT_DIRECTION, currentShape);
                 PaintMatrix();
