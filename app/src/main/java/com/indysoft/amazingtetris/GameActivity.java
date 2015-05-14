@@ -17,8 +17,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
 
 
 public class GameActivity extends Activity implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener {
@@ -33,8 +31,10 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
     final int RIGHT_DIRECTION = 1;
     final int DOWN_DIRECTION = 2;
     final int LEFT_DIRECTION = 3;
+    final int SPEED_NORMAL = 500;
+    final int SPEED_FAST = 50;
     int score;
-    boolean gameInProgress, gamePaused;
+    boolean gameInProgress, gamePaused, fastSpeedState, currentShapeAlive;
 
     final int dx[] = {-1, 0, 1, 0};
     final int dy[] = {0, 1, 0, -1};
@@ -51,9 +51,34 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     Shape currentShape;
 
-    Timer timer;
-    TimerTask timerTask;
-    int fastSpeedState;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_game);
+
+        bitmap = Bitmap.createBitmap(BOARD_WIDTH, BOARD_HEIGHT, Bitmap.Config.ARGB_8888);
+        canvas = new Canvas(bitmap);
+        paint = new Paint();
+        linearLayout = (LinearLayout) findViewById(R.id.game_board);
+        score = 0;
+        currentShapeAlive = false;
+
+        gestureDetector = new GestureDetectorCompat(this, this);
+        gestureDetector.setOnDoubleTapListener(this);
+
+        ShapesInit();
+
+        GameInit();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (gameInProgress) {
+            gamePaused = true;
+            PaintMatrix();
+        }
+    }
 
     private void ShapesInit() {
         int[][] a = new int[5][5];
@@ -293,37 +318,6 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         return found;
     }
 
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
-
-        bitmap = Bitmap.createBitmap(BOARD_WIDTH, BOARD_HEIGHT, Bitmap.Config.ARGB_8888);
-        canvas = new Canvas(bitmap);
-        paint = new Paint();
-        linearLayout = (LinearLayout) findViewById(R.id.game_board);
-        score = 0;
-
-        gestureDetector = new GestureDetectorCompat(this, this);
-        gestureDetector.setOnDoubleTapListener(this);
-
-        timer = new Timer();
-
-        ShapesInit();
-
-        GameInit();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        if (gameInProgress) {
-            gamePaused = true;
-            PaintMatrix();
-        }
-    }
-
     void PaintMatrix() {
 
         // Paint the game board background
@@ -404,50 +398,62 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         textView.setText("Score: " + score);
     }
 
-    void TimerInit(int mFastSpeedState) {
-        // fastSpeedState = 0 for normal speed
-        // fastSpeedState = 2 for fast speed
-        // fastSpeedState = 1 for fast speed to be changed in normal speed
-        timer.cancel();
-        timer = new Timer();
-        fastSpeedState = mFastSpeedState;
-        timerTask = new TimerTask() {
-            @Override
-            public void run() {
+    private Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
 
-                //Perform background work here
-                if (fastSpeedState != 1 && gameInProgress && !gamePaused) {
-                    boolean moved = MoveShape(DOWN_DIRECTION, currentShape);
-                    if (!moved) {
-                        Check();
-                        if (fastSpeedState == 2) // fast speed
-                        {
-                            fastSpeedState = 1; // to be changed to normal speed
-                            return;
-                        }
-                        boolean created = CreateShape();
-                        if (!created)
-                            gameInProgress = false;
-                    }
-                }
-                handler.post(new Runnable() {
-                    public void run() {
-                        //Perform GUI updation work here
-                        if (gameInProgress && gamePaused)
-                            return;
-                        PaintMatrix();
-                        if (!gameInProgress) {
-                            cancel();
-                            return;
-                        }
-                        if (fastSpeedState == 1) {
-                            TimerInit(0);
-                            timer.schedule(timerTask, 0, 500);
-                        }
-                    }
-                });
+            if (!gameInProgress) {
+                return;
             }
-        };
+            if (gamePaused) {
+                PaintMatrix();
+                if (fastSpeedState)
+                    handler.postDelayed(this, SPEED_FAST);
+                else
+                    handler.postDelayed(this, SPEED_NORMAL);
+                return;
+            }
+
+            if (!currentShapeAlive) { // we have no current shape
+                currentShapeAlive = CreateShape(); // so we create one
+                if (!currentShapeAlive) { // if not possible, then game over
+                    gameInProgress = false;
+                    PaintMatrix();
+                    return;
+                }
+                PaintMatrix();
+                handler.postDelayed(this, SPEED_NORMAL);
+                return;
+            }
+
+            boolean moved = MoveShape(DOWN_DIRECTION, currentShape);
+            if (!moved) { // current shape is down
+                currentShapeAlive = false;
+                Check(); // check for complete rows
+                PaintMatrix();
+                if (fastSpeedState) {
+                    ChangeFastSpeedState(false);
+                    return;
+                }
+            } else
+                PaintMatrix();
+
+            if (fastSpeedState)
+                handler.postDelayed(this, SPEED_FAST);
+            else
+                handler.postDelayed(this, SPEED_NORMAL);
+        }
+    };
+
+    void ChangeFastSpeedState(boolean mFastSpeedState) {
+        // fastSpeedState = false for normal speed
+        // fastSpeedState = true for fast speed
+        handler.removeCallbacks(runnable);
+        fastSpeedState = mFastSpeedState;
+        if (fastSpeedState)
+            handler.postDelayed(runnable, SPEED_FAST);
+        else
+            handler.postDelayed(runnable, SPEED_NORMAL);
     }
 
     void GameInit() {
@@ -482,7 +488,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         }
 
         // Create an initial tetris block
-        CreateShape();
+        currentShapeAlive = CreateShape();
 
         // Start the game
         gameInProgress = true;
@@ -492,8 +498,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         PaintMatrix();
 
         // Set a timer
-        TimerInit(0);
-        timer.schedule(timerTask, 500, 500); // after x ms, it runs every y ms
+        ChangeFastSpeedState(false);
     }
 
     @Override
@@ -585,8 +590,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 // move fast down
                 if (!gameInProgress || gamePaused)
                     return false;
-                TimerInit(2);
-                timer.schedule(timerTask, 0, 50);
+                ChangeFastSpeedState(true);
             } else {
                 // LEFT
                 // move left
