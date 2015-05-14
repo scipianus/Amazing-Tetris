@@ -274,6 +274,8 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 ++k;
                 found = true;
             } else {
+                if (k == 0)
+                    continue;
                 for (int j = 3; j < NUM_COLUMNS - 3; ++j) {
                     int state = gameMatrix[i][j].getState();
                     int color = gameMatrix[i][j].getColor();
@@ -414,15 +416,15 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             public void run() {
 
                 //Perform background work here
-                if (gameInProgress && !gamePaused) {
+                if (fastSpeedState != 1 && gameInProgress && !gamePaused) {
                     boolean moved = MoveShape(DOWN_DIRECTION, currentShape);
                     if (!moved) {
+                        Check();
                         if (fastSpeedState == 2) // fast speed
                         {
                             fastSpeedState = 1; // to be changed to normal speed
                             return;
                         }
-                        Check();
                         boolean created = CreateShape();
                         if (!created)
                             gameInProgress = false;
