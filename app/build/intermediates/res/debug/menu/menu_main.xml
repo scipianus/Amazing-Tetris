@@ -4,4 +4,4 @@
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
 </menu>
-<!-- From: file:/home/ciprian/AndroidStudioProjects/AmazingTetris/app/src/main/res/menu/menu_main.xml -->
+<!-- From: file:/E:/Android%20Club/Amazing-Tetris-master/app/src/main/res/menu/menu_main.xml -->

@@ -91,37 +91,37 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
         // L
         a[1][2] = a[1][3] = a[2][3] = a[3][3] = 1;
-        shapes[0] = new Shape(a, Color.rgb(255, 165, 0));
+        shapes[0] = new Shape(a, Color.rgb(255, 165, 0), BoardCell.BEHAVIOR_IS_FALLING);
         a[1][2] = a[1][3] = a[2][3] = a[3][3] = 0;
 
         // Z
         a[2][1] = a[2][2] = a[3][2] = a[3][3] = 1;
-        shapes[1] = new Shape(a, Color.RED);
+        shapes[1] = new Shape(a, Color.RED, BoardCell.BEHAVIOR_IS_FALLING);
         a[2][1] = a[2][2] = a[3][2] = a[3][3] = 0;
 
         // I
         a[1][2] = a[2][2] = a[3][2] = a[4][2] = 1;
-        shapes[2] = new Shape(a, Color.CYAN);
+        shapes[2] = new Shape(a, Color.CYAN, BoardCell.BEHAVIOR_IS_FALLING);
         a[1][2] = a[2][2] = a[3][2] = a[4][2] = 0;
 
         // O
         a[2][2] = a[2][3] = a[3][2] = a[3][3] = 1;
-        shapes[3] = new Shape(a, Color.YELLOW);
+        shapes[3] = new Shape(a, Color.YELLOW, BoardCell.BEHAVIOR_IS_FALLING);
         a[2][2] = a[2][3] = a[3][2] = a[3][3] = 0;
 
         // T
         a[1][2] = a[2][2] = a[2][3] = a[3][2] = 1;
-        shapes[4] = new Shape(a, Color.rgb(139, 0, 139));
+        shapes[4] = new Shape(a, Color.rgb(139, 0, 139), BoardCell.BEHAVIOR_IS_FALLING);
         a[1][2] = a[2][2] = a[2][3] = a[3][2] = 0;
 
         // S
         a[1][2] = a[2][2] = a[2][3] = a[3][3] = 1;
-        shapes[5] = new Shape(a, Color.rgb(0, 255, 0));
+        shapes[5] = new Shape(a, Color.rgb(0, 255, 0), BoardCell.BEHAVIOR_IS_FALLING);
         a[1][2] = a[2][2] = a[2][3] = a[3][3] = 0;
 
         // J
         a[1][3] = a[2][3] = a[3][2] = a[3][3] = 1;
-        shapes[6] = new Shape(a, Color.BLUE);
+        shapes[6] = new Shape(a, Color.BLUE, BoardCell.BEHAVIOR_IS_FALLING);
         a[1][3] = a[2][3] = a[3][2] = a[3][3] = 0;
 
     }
@@ -129,7 +129,46 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
     private void CopyMatrix(BoardCell[][] A, BoardCell[][] B) {
         for (int i = 0; i < NUM_ROWS; ++i) {
             for (int j = 0; j < NUM_COLUMNS; ++j) {
-                B[i][j] = new BoardCell(A[i][j].getState(), A[i][j].getColor());
+                B[i][j] = new BoardCell(A[i][j].getState(), A[i][j].getColor(), A[i][j].getBehavior());
+            }
+        }
+    }
+
+    private void FixGameMatrix(){
+        for (int i = 3; i < NUM_ROWS - 3; ++ i){
+            for (int j = 3; j < NUM_COLUMNS - 3; ++ j){
+                if (gameMatrix[i][j].getState() == 0){
+                    gameMatrix[i][j].setColor(Color.BLACK);
+                    gameMatrix[i][j].setBehavior(BoardCell.BEHAVIOR_NOTHING);
+                    continue;
+                }
+                if (gameMatrix[i][j].getBehavior() == BoardCell.BEHAVIOR_IS_FIXED)
+                    continue;
+                if (gameMatrix[i][j].getBehavior() == BoardCell.BEHAVIOR_IS_FALLING){
+                    int ind, jnd, ii, jj;
+                    for (ind = 1, ii = currentShape.x; ind <= 4; ++ ind, ++ ii){
+                        for (jnd = 1, jj = currentShape.y; jnd <= 4; ++ jnd, ++ jj){
+                            if (ii == i && jj == j){
+                                if (currentShape.mat[ind][jnd].getState() == 0){
+                                    gameMatrix[i][j] = new BoardCell();
+                                }
+                            }
+                        }
+                    }
+                    continue;
+                }
+                if (gameMatrix[i][j].getBehavior() == BoardCell.BEHAVIOR_NOTHING){
+                    int ind, jnd, ii, jj;
+                    for (ind = 1, ii = currentShape.x; ind <= 4; ++ ind, ++ ii){
+                        for (jnd = 1, jj = currentShape.y; jnd <= 4; ++ jnd, ++ jj){
+                            if (ii == i && jj == j){
+                                if (currentShape.mat[ind][jnd].getState() == 1){
+                                    gameMatrix[i][j] = currentShape.mat[ind][jnd];
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -156,15 +195,18 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 gameMatrix[ii][jj].setState(gameMatrix[ii][jj].getState() + nowShape.mat[i][j].getState());
                 if (nowShape.mat[i][j].getState() == 1) {
                     gameMatrix[ii][jj].setColor(nowShape.mat[i][j].getColor());
+                    gameMatrix[ii][jj].setBehavior(nowShape.mat[i][j].getBehavior());
                 }
                 if (gameMatrix[ii][jj].getState() > 1) {
                     CopyMatrix(aux, gameMatrix);
+                    FixGameMatrix();
                     return false;
                 }
             }
         }
         nowShape.x += dx[direction];
         nowShape.y += dy[direction];
+        FixGameMatrix();
         return true;
     }
 
@@ -191,6 +233,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 gameMatrix[ii][jj].setState(gameMatrix[ii][jj].getState() + nowShape.mat[i][j].getState());
                 if (nowShape.mat[i][j].getState() == 1) {
                     gameMatrix[ii][jj].setColor(nowShape.mat[i][j].getColor());
+                    gameMatrix[ii][jj].setBehavior(nowShape.mat[i][j].getBehavior());
                 }
                 // if we can't put the rotated shape on the table
                 if (gameMatrix[ii][jj].getState() > 1) {
@@ -198,10 +241,12 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                     CopyMatrix(aux, gameMatrix);
                     // ... and rotate the shape to right, to obtain its initial state
                     nowShape.RotateRight();
+                    FixGameMatrix();
                     return false;
                 }
             }
         }
+        FixGameMatrix();
         return true;
     }
 
@@ -228,6 +273,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 gameMatrix[ii][jj].setState(gameMatrix[ii][jj].getState() + nowShape.mat[i][j].getState());
                 if (nowShape.mat[i][j].getState() == 1) {
                     gameMatrix[ii][jj].setColor(nowShape.mat[i][j].getColor());
+                    gameMatrix[ii][jj].setBehavior(nowShape.mat[i][j].getBehavior());
                 }
                 // if we can't put the rotated shape on the table
                 if (gameMatrix[ii][jj].getState() > 1) {
@@ -235,10 +281,12 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                     CopyMatrix(aux, gameMatrix);
                     // ... and rotate the shape to left, to obtain its initial state
                     nowShape.RotateLeft();
+                    FixGameMatrix();
                     return false;
                 }
             }
         }
+        FixGameMatrix();
         return true;
     }
 
@@ -269,10 +317,12 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                     for (j = 1, jj = currentShape.y; j <= 4; ++j, ++jj) {
                         if (currentShape.mat[i][j].getState() == 1) {
                             gameMatrix[ii][jj].setColor(currentShape.mat[i][j].getColor());
+                            gameMatrix[ii][jj].setBehavior(currentShape.mat[i][j].getBehavior());
                         }
                     }
                 }
                 currentShape.x += offset;
+                FixGameMatrix();
                 return true;
             } else {
                 for (ii = currentShape.x + offset, i = 1; i <= 4; ++i, ++ii) {
@@ -282,6 +332,8 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 }
             }
         }
+        /// de avut grija
+        FixGameMatrix();
         return false;
     }
 
@@ -304,7 +356,8 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 for (int j = 3; j < NUM_COLUMNS - 3; ++j) {
                     int state = gameMatrix[i][j].getState();
                     int color = gameMatrix[i][j].getColor();
-                    gameMatrix[i + k][j] = new BoardCell(state, color);
+                    int behavior = gameMatrix[i][j].getBehavior();
+                    gameMatrix[i + k][j] = new BoardCell(state, color, behavior);
                 }
             }
         }
@@ -315,6 +368,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         }
         // Update the score
         score += k * (k + 1) / 2;
+        FixGameMatrix();
         return found;
     }
 
@@ -415,7 +469,18 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             }
 
             boolean moved = MoveShape(DOWN_DIRECTION, currentShape);
+
             if (!moved) { // current shape is down
+                // mark the new cells as fixed so they won't be affected by eventual bugs
+                int ind, jnd, i, j;
+                for (ind = 1, i = currentShape.x; ind <= 4; ++ ind, ++ i){
+                    for (jnd = 1, j = currentShape.y; jnd <= 4; ++ jnd, ++ j){
+                        if (currentShape.mat[ind][jnd].getState() == 1){
+                            gameMatrix[i][j].setBehavior(BoardCell.BEHAVIOR_IS_FIXED);
+                            currentShape.mat[ind][jnd].setBehavior(BoardCell.BEHAVIOR_IS_FIXED);
+                        }
+                    }
+                }
                 currentShapeAlive = false;
                 Check(); // check for complete rows
                 currentShapeAlive = CreateShape(); // create another shape
@@ -481,6 +546,11 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 gameMatrix[i][j] = new BoardCell(1, Color.BLACK);
             }
         }
+
+        for (int j = 3; j < NUM_COLUMNS - 3; ++ j){
+            gameMatrix[NUM_ROWS - 4][j] = new BoardCell(gameMatrix[NUM_ROWS - 4][j].getState(), gameMatrix[NUM_ROWS - 4][j].getColor(), BoardCell.BEHAVIOR_IS_FIXED);
+        }
+
 
         // Create an initial tetris block
         currentShapeAlive = CreateShape();
@@ -618,18 +688,26 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
     }
 
     public class BoardCell {
-
-        private int state, color;
+        public final static int BEHAVIOR_IS_FIXED = 2, BEHAVIOR_IS_FALLING = 1, BEHAVIOR_NOTHING = 0;
+        private int state, color, behavior;
         // state = 0 means free cell, state = 1 means occupied cell
 
         public BoardCell() {
             state = 0;
             color = Color.BLACK;
+            behavior = BEHAVIOR_NOTHING;
         }
 
         public BoardCell(int state, int color) {
             this.state = state;
             this.color = color;
+            this.behavior = BEHAVIOR_NOTHING;
+        }
+
+        public BoardCell(int state, int color, int behavior){
+            this.state = state;
+            this.color = color;
+            this.behavior = behavior;
         }
 
         public int getState() {
@@ -640,6 +718,8 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             return color;
         }
 
+        public int getBehavior() {return behavior;}
+
         public void setState(int state) {
             this.state = state;
         }
@@ -647,6 +727,8 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         public void setColor(int color) {
             this.color = color;
         }
+
+        public void setBehavior(int behavior) {this.behavior = behavior;}
     }
 
     public class Shape {
@@ -670,10 +752,21 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                     } else {
                         mat[i][j] = new BoardCell();
                     }
-
                 }
             }
             x = y = 0;
+        }
+
+        Shape(int[][] _mat, int _color, final int behavior){
+            for (int i = 0; i < 5; ++ i){
+                for (int j = 0; j < 5; ++ j){
+                    if (_mat[i][j] == 1)
+                        mat[i][j] = new BoardCell(_mat[i][j], _color, behavior);
+                    else
+                        mat[i][j] = new BoardCell();
+
+                }
+            }
         }
 
         Shape(int[][] _mat, int _color, int _x, int _y) {
@@ -684,12 +777,13 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                     } else {
                         mat[i][j] = new BoardCell();
                     }
-
                 }
             }
             x = _x;
             y = _y;
         }
+
+
 
         void RotateLeft() {
             BoardCell[][] aux = new BoardCell[5][5];
