@@ -414,22 +414,17 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 return;
             }
 
-            if (!currentShapeAlive) { // we have no current shape
-                currentShapeAlive = CreateShape(); // so we create one
-                if (!currentShapeAlive) { // if not possible, then game over
-                    gameInProgress = false;
-                    PaintMatrix();
-                    return;
-                }
-                PaintMatrix();
-                handler.postDelayed(this, SPEED_NORMAL);
-                return;
-            }
-
             boolean moved = MoveShape(DOWN_DIRECTION, currentShape);
             if (!moved) { // current shape is down
                 currentShapeAlive = false;
                 Check(); // check for complete rows
+                currentShapeAlive = CreateShape(); // create another shape
+                if (!currentShapeAlive) // if not possible, then game over
+                {
+                    gameInProgress = false;
+                    PaintMatrix();
+                    return;
+                }
                 PaintMatrix();
                 if (fastSpeedState) {
                     ChangeFastSpeedState(false);
@@ -528,7 +523,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     @Override
     public boolean onSingleTapUp(MotionEvent e) {
-        if (!gameInProgress || gamePaused)
+        if (!gameInProgress || gamePaused || !currentShapeAlive)
             return false;
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
