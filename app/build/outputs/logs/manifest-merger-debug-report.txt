@@ -63,7 +63,7 @@ ADDED from AndroidManifest.xml:27:13
 		ADDED from AndroidManifest.xml:29:17
 	android:name
 		ADDED from AndroidManifest.xml:28:17
-activity#com.indysoft.amazingtetris.HighScoresActivity
+activity#com.indysoft.amazingtetris.SettingsActivity
 ADDED from AndroidManifest.xml:31:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:36:13
@@ -75,7 +75,7 @@ ADDED from AndroidManifest.xml:31:9
 		ADDED from AndroidManifest.xml:35:13
 	android:name
 		ADDED from AndroidManifest.xml:32:13
-activity#com.indysoft.amazingtetris.GameActivity
+activity#com.indysoft.amazingtetris.HighScoresActivity
 ADDED from AndroidManifest.xml:41:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:46:13
@@ -87,6 +87,18 @@ ADDED from AndroidManifest.xml:41:9
 		ADDED from AndroidManifest.xml:45:13
 	android:name
 		ADDED from AndroidManifest.xml:42:13
+activity#com.indysoft.amazingtetris.GameActivity
+ADDED from AndroidManifest.xml:51:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:56:13
+	android:label
+		ADDED from AndroidManifest.xml:53:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:54:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:55:13
+	android:name
+		ADDED from AndroidManifest.xml:52:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:22.1.1:20:5

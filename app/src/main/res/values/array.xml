@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="difficulty_preference_entries">
+        <item>Normal</item>
+        <item>Hard</item>
+    </string-array>
+
+    <string-array name="difficulty_preference_entryValues">
+        <item>Normal</item>
+        <item>Hard</item>
+    </string-array>
+
+    <string-array name="num_rows_preference_entries">
+        <item>4</item>
+        <item>8</item>
+        <item>10</item>
+        <item>20</item>
+        <item>40</item>
+        <item>80</item>
+    </string-array>
+
+    <string-array name="num_rows_preference_entryValues">
+        <item>4</item>
+        <item>8</item>
+        <item>10</item>
+        <item>20</item>
+        <item>40</item>
+        <item>80</item>
+    </string-array>
+
+    <string-array name="num_columns_preference_entries">
+        <item>4</item>
+        <item>8</item>
+        <item>10</item>
+        <item>20</item>
+        <item>40</item>
+    </string-array>
+
+    <string-array name="num_columns_preference_entryValues">
+        <item>4</item>
+        <item>8</item>
+        <item>10</item>
+        <item>20</item>
+        <item>40</item>
+    </string-array>
+
+    <string-array name="speed_preference_entries">
+        <item>Slow</item>
+        <item>Normal</item>
+        <item>Fast</item>
+    </string-array>
+
+    <string-array name="speed_preference_entryValues">
+        <item>Slow</item>
+        <item>Normal</item>
+        <item>Fast</item>
+    </string-array>
+</resources>

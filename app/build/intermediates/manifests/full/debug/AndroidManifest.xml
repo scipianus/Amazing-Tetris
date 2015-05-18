@@ -35,6 +35,16 @@
                 android:value="com.indysoft.amazingtetris.MainActivity" />
         </activity>
         <activity
+            android:name="com.indysoft.amazingtetris.SettingsActivity"
+            android:configChanges="orientation"
+            android:label="Amazing Tetris"
+            android:parentActivityName="com.indysoft.amazingtetris.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.indysoft.amazingtetris.MainActivity" />
+        </activity>
+        <activity
             android:name="com.indysoft.amazingtetris.HighScoresActivity"
             android:configChanges="orientation"
             android:label="@string/app_name"

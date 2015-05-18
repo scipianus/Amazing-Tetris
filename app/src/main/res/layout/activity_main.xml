@@ -64,12 +64,22 @@
 
     <Button
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_button_text"
+        android:id="@+id/settings_button"
         android:layout_marginBottom="20dp"
+        android:textSize="20dp"
+        android:layout_below="@+id/high_scores_button"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/about_button_text"
         android:id="@+id/about_button"
         android:textSize="20dp"
-        android:layout_below="@+id/high_scores_button"
+        android:layout_below="@+id/settings_button"
         android:layout_centerHorizontal="true" />
+
+
 
 </RelativeLayout>

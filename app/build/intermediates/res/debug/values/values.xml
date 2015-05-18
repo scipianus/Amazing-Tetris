@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/E:/Android%20Club/Amazing-Tetris-master/app/src/main/res/values/array.xml -->
+    <eat-comment/>
+    <string-array name="difficulty_preference_entries">
+        <item>Normal</item>
+        <item>Hard</item>
+    </string-array>
+    <string-array name="difficulty_preference_entryValues">
+        <item>Normal</item>
+        <item>Hard</item>
+    </string-array>
+    <string-array name="num_columns_preference_entries">
+        <item>4</item>
+        <item>8</item>
+        <item>10</item>
+        <item>20</item>
+        <item>40</item>
+    </string-array>
+    <string-array name="num_columns_preference_entryValues">
+        <item>4</item>
+        <item>8</item>
+        <item>10</item>
+        <item>20</item>
+        <item>40</item>
+    </string-array>
+    <string-array name="num_rows_preference_entries">
+        <item>4</item>
+        <item>8</item>
+        <item>10</item>
+        <item>20</item>
+        <item>40</item>
+        <item>80</item>
+    </string-array>
+    <string-array name="num_rows_preference_entryValues">
+        <item>4</item>
+        <item>8</item>
+        <item>10</item>
+        <item>20</item>
+        <item>40</item>
+        <item>80</item>
+    </string-array>
+    <string-array name="speed_preference_entries">
+        <item>Slow</item>
+        <item>Normal</item>
+        <item>Fast</item>
+    </string-array>
+    <string-array name="speed_preference_entryValues">
+        <item>Slow</item>
+        <item>Normal</item>
+        <item>Fast</item>
+    </string-array>
     <!-- From: file:/E:/Android%20Club/Amazing-Tetris-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
@@ -201,6 +251,7 @@
     <string name="high_scores_button_text">High scores</string>
     <string name="high_scores_string">High Scores</string>
     <string name="new_game_button_text">New game</string>
+    <string name="settings_button_text">Settings</string>
     <string name="welcome_string">Welcome,</string>
     <!-- From: file:/E:/Android%20Club/Amazing-Tetris-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>

@@ -46,32 +46,110 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1747" max-vertical-offset="2376">
+              <caret line="25" column="64" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="GameActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/GameActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.1545453" vertical-offset="10938" max-vertical-offset="15456">
-              <caret line="473" column="89" selection-start-line="473" selection-start-column="89" selection-end-line="473" selection-end-column="89" />
+            <state vertical-scroll-proportion="0.8181818" vertical-offset="1416" max-vertical-offset="20016">
+              <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-                <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-                <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-                <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-                <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-                <element signature="e#18165#20082#0" expanded="true" />
-                <element signature="e#20075#20076#0" expanded="true" />
-                <element signature="e#22162#22163#0" expanded="true" />
-                <element signature="e#22190#22191#0" expanded="true" />
-                <element signature="e#22253#22254#0" expanded="true" />
-                <element signature="e#22281#22282#0" expanded="true" />
-                <element signature="e#22349#22350#0" expanded="true" />
-                <element signature="e#22377#22378#0" expanded="true" />
-                <element signature="e#22435#22436#0" expanded="true" />
-                <element signature="e#22463#22464#0" expanded="true" />
-                <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-                <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-                <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_about.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="648">
+              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="preferences.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/preferences.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="768" max-vertical-offset="960">
+              <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="array.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/array.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="763" max-vertical-offset="1512">
+              <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AboutActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/AboutActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="504">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingsActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/SettingsActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="720">
+              <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="1656">
+              <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="2184">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="480">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,6 +193,465 @@
     </option>
     <option name="availableTasks">
       <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateReleaseBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="checkDebugManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseNdk" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the android (on device) tests for the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="uninstallDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:support-v4:22.1.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportSupportV42211Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareDebugAndroidTestDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on the Release build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="lintRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstall all applications." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="uninstallAll" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all Release builds." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugNdk" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="packageDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="packageRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all Debug builds." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Run unit tests for the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="testDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preDebugAndroidTestBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Creates a version of android.jar that's suitable for unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mockableAndroidJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugAndroidTestBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseUnitTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preDexRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugAndroidTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dexDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeDebugAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the signing info for each variant." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="signingReport" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preCompileDebugUnitTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processReleaseJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the android (on device) tests for the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="uninstallDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processReleaseManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all variants of all applications and secondary packages." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on just the fatal issues in the Release build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="lintVitalRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateReleaseResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugAndroidTestJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dexRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugAndroidTestNdk" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the Release build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="uninstallRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all the Test applications." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareDebugDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugAndroidTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the Android dependencies of the project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="androidDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="checkReleaseManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugAndroidTestResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeDebugAndroidTestAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugAndroidTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dexDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateReleaseSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="validateDebugSigning" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugAndroidTestManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugAndroidTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Run unit tests for the Release build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="testRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="packageDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeDebugAndroidTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="zipalignDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugAndroidTestRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs and runs the tests for Debug build on connected devices." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="connectedAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugUnitTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileLint" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preDexDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Run all unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeReleaseAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugUnitTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the unit tests for the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleDebugUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the android (on device) tests for the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="installDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:appcompat-v7:22.1.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportAppcompatV72211Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseUnitTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateReleaseAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the unit tests for the Release build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleReleaseUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on all variants." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="lint" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all device checks on currently connected devices." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="connectedCheck" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareReleaseDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preDebugBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugAndroidTestAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preCompileReleaseUnitTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preReleaseBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preDexDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugAndroidTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="installDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="lintDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugAndroidTestAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all device checks using Device Providers and Test Servers." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="deviceCheck" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app">
           <value>
             <list>
@@ -576,6 +1113,11 @@
         </entry>
       </map>
     </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="4295149409846" />
+      </map>
+    </option>
     <option name="projectBuildClasspath">
       <map>
         <entry key="$PROJECT_DIR$">
@@ -819,9 +1361,16 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/PreferencesActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/PreferencesActivityClass.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/PreferencesActivityClassImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/xml/preferences.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/array.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/SettingsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/GameActivity.java" />
       </list>
     </option>
@@ -861,6 +1410,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
@@ -869,10 +1419,171 @@
               <option name="myItemId" value="Amazing-Tetris-master" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Amazing-Tetris-master" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Amazing-Tetris-master" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Amazing-Tetris-master" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mipmap" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ic_launcher.png" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Amazing-Tetris-master" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Amazing-Tetris-master" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Amazing-Tetris-master" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Amazing-Tetris-master" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Amazing-Tetris-master" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="amazingtetris" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Amazing-Tetris-master" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manifests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane" />
     </panes>
   </component>
@@ -889,6 +1600,12 @@
     <property name="FullScreen" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.indysoft.amazingtetris" />
+    </key>
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1081,17 +1798,17 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327787" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32703003" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.269188" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32703003" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22024472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.269188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18603411" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1106,9 +1823,40 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="100" y="100" width="1166" height="543" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32703003" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="100" y="100" width="1166" height="543" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32703003" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.269188" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18603411" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1132,30 +1880,120 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1294" max-vertical-offset="2184">
+          <caret line="69" column="42" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="480">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/GameActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="19752">
+          <caret line="438" column="37" selection-start-line="438" selection-start-column="29" selection-end-line="438" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1318" max-vertical-offset="2736">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/preferences.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="336">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/AboutActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="504">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/SettingsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="504">
+          <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="336">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1124" max-vertical-offset="2184">
+          <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="480">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/GameActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="12027" max-vertical-offset="15192">
+          <caret line="686" column="48" selection-start-line="686" selection-start-column="48" selection-end-line="686" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/GameActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="12034" max-vertical-offset="15456">
+          <caret line="473" column="89" selection-start-line="473" selection-start-column="89" selection-end-line="473" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/GameActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="14400" max-vertical-offset="17448">
           <caret line="611" column="30" selection-start-line="611" selection-start-column="30" selection-end-line="611" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1166,24 +2004,6 @@
           <caret line="596" column="53" selection-start-line="596" selection-start-column="53" selection-end-line="596" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1194,24 +2014,6 @@
           <caret line="541" column="16" selection-start-line="541" selection-start-column="16" selection-end-line="541" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1222,24 +2024,6 @@
           <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1250,24 +2034,6 @@
           <caret line="228" column="26" selection-start-line="228" selection-start-column="26" selection-end-line="228" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1278,24 +2044,6 @@
           <caret line="591" column="30" selection-start-line="591" selection-start-column="30" selection-end-line="591" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1306,24 +2054,6 @@
           <caret line="571" column="0" selection-start-line="571" selection-start-column="0" selection-end-line="571" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1334,24 +2064,6 @@
           <caret line="578" column="17" selection-start-line="578" selection-start-column="17" selection-end-line="578" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1362,24 +2074,6 @@
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1390,24 +2084,6 @@
           <caret line="402" column="31" selection-start-line="402" selection-start-column="31" selection-end-line="402" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1418,24 +2094,6 @@
           <caret line="396" column="74" selection-start-line="396" selection-start-column="74" selection-end-line="396" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1446,24 +2104,6 @@
           <caret line="494" column="0" selection-start-line="494" selection-start-column="0" selection-end-line="494" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1482,24 +2122,6 @@
           <caret line="494" column="0" selection-start-line="494" selection-start-column="0" selection-end-line="494" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1518,24 +2140,6 @@
           <caret line="511" column="30" selection-start-line="511" selection-start-column="30" selection-end-line="511" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1546,24 +2150,6 @@
           <caret line="503" column="13" selection-start-line="503" selection-start-column="13" selection-end-line="503" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1574,24 +2160,6 @@
           <caret line="68" column="50" selection-start-line="68" selection-start-column="50" selection-end-line="68" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1602,24 +2170,6 @@
           <caret line="444" column="10" selection-start-line="444" selection-start-column="10" selection-end-line="444" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1630,24 +2180,6 @@
           <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1658,24 +2190,6 @@
           <caret line="110" column="51" selection-start-line="110" selection-start-column="51" selection-end-line="110" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1703,34 +2217,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/AboutActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/tetrislogo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20869565" vertical-offset="0" max-vertical-offset="575">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="491" max-vertical-offset="1170">
-          <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="480">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/array.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="763" max-vertical-offset="1512">
+          <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6569343" vertical-offset="195" max-vertical-offset="1215">
-          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
-          <folding>
-            <element signature="e#231#266#0" expanded="false" />
-            <element signature="e#292#327#0" expanded="false" />
-            <element signature="e#351#384#0" expanded="false" />
-            <element signature="e#411#444#0" expanded="false" />
-            <element signature="e#1033#1057#0" expanded="false" />
-            <element signature="e#1800#1830#0" expanded="false" />
-            <element signature="e#2258#2291#0" expanded="false" />
-            <element signature="e#2637#2664#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="2184">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1739,36 +2274,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="885">
-          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1656">
+          <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="648">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/SettingsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="624">
+          <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/AboutActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/preferences.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="331" max-vertical-offset="960">
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="2376">
+          <caret line="25" column="64" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/indysoft/amazingtetris/GameActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.1545453" vertical-offset="10938" max-vertical-offset="15456">
-          <caret line="473" column="89" selection-start-line="473" selection-start-column="89" selection-end-line="473" selection-end-column="89" />
+        <state vertical-scroll-proportion="0.8181818" vertical-offset="1416" max-vertical-offset="20016">
+          <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ShapesInit#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#CopyMatrix#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateLeft#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#RotateRight#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#Check#0;class#GameActivity#0" expanded="false" />
-            <element signature="e#18165#20082#0" expanded="true" />
-            <element signature="e#20075#20076#0" expanded="true" />
-            <element signature="e#22162#22163#0" expanded="true" />
-            <element signature="e#22190#22191#0" expanded="true" />
-            <element signature="e#22253#22254#0" expanded="true" />
-            <element signature="e#22281#22282#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
-            <element signature="e#22377#22378#0" expanded="true" />
-            <element signature="e#22435#22436#0" expanded="true" />
-            <element signature="e#22463#22464#0" expanded="true" />
-            <element signature="method#BoardCell#0;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#1;class#BoardCell#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#BoardCell#2;class#BoardCell#0;class#GameActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>

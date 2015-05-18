@@ -1,6 +1,7 @@
 package com.indysoft.amazingtetris;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -9,6 +10,7 @@ import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.v4.view.GestureDetectorCompat;
 import android.view.Display;
 import android.view.GestureDetector;
@@ -21,8 +23,8 @@ import java.util.Random;
 
 public class GameActivity extends Activity implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener {
 
-    final int NUM_ROWS = 26;
-    final int NUM_COLUMNS = 16;
+    int NUM_ROWS = 26;
+    int NUM_COLUMNS = 16;
     final int BOARD_HEIGHT = 800;
     final int BOARD_WIDTH = 400;
     final Handler handler = new Handler();
@@ -31,8 +33,9 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
     final int RIGHT_DIRECTION = 1;
     final int DOWN_DIRECTION = 2;
     final int LEFT_DIRECTION = 3;
-    final int SPEED_NORMAL = 500;
-    final int SPEED_FAST = 50;
+    int SPEED_NORMAL = 500;
+    int SPEED_FAST = 50;
+    String difficulty = "a";
     int score;
     boolean gameInProgress, gamePaused, fastSpeedState, currentShapeAlive;
 
@@ -55,6 +58,33 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+        //PreferenceManager.setDefaultValues(this, R.xml.preferences, true); // !?!?
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+        difficulty = prefs.getString("difficulty_preference", "Normal");
+        NUM_ROWS = Integer.parseInt(prefs.getString("num_rows_preference", "20")) + 6;
+        NUM_COLUMNS = Integer.parseInt(prefs.getString("num_columns_preference", "10")) + 6;
+        String speed = prefs.getString("speed_preference", "Normal");
+        switch (speed){
+            case "Slow":{
+                SPEED_NORMAL = 1000;
+                SPEED_FAST = 100;
+                break;
+            }
+            case "Normal":{
+                SPEED_NORMAL = 500;
+                SPEED_FAST = 50;
+                break;
+            }
+            case "Fast":{
+                SPEED_NORMAL = 250;
+                SPEED_FAST = 25;
+                break;
+            }
+        }
+
+
+
 
         bitmap = Bitmap.createBitmap(BOARD_WIDTH, BOARD_HEIGHT, Bitmap.Config.ARGB_8888);
         canvas = new Canvas(bitmap);
