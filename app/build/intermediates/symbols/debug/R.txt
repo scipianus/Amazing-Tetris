@@ -461,9 +461,9 @@ int id list_item 0x7f0b002a
 int id logoImageView 0x7f0b0053
 int id middle 0x7f0b0015
 int id multiply 0x7f0b001e
-int id nameEditText 0x7f0b0055
+int id nameEditText 0x7f0b0056
 int id never 0x7f0b0019
-int id new_game_button 0x7f0b0056
+int id new_game_button 0x7f0b0055
 int id none 0x7f0b000e
 int id normal 0x7f0b000a
 int id parentPanel 0x7f0b002d

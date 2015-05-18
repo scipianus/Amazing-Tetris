@@ -1570,9 +1570,9 @@ containing a value of this type.
         public static final int logoImageView=0x7f0b0053;
         public static final int middle=0x7f0b0015;
         public static final int multiply=0x7f0b001e;
-        public static final int nameEditText=0x7f0b0055;
+        public static final int nameEditText=0x7f0b0056;
         public static final int never=0x7f0b0019;
-        public static final int new_game_button=0x7f0b0056;
+        public static final int new_game_button=0x7f0b0055;
         public static final int none=0x7f0b000e;
         public static final int normal=0x7f0b000a;
         public static final int parentPanel=0x7f0b002d;
