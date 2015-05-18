@@ -32,7 +32,7 @@
             android:label="Amazing Tetris"
             android:parentActivityName=".MainActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait">
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.indysoft.amazingtetris.MainActivity" />

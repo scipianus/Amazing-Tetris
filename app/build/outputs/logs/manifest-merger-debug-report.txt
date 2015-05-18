@@ -63,8 +63,6 @@ ADDED from AndroidManifest.xml:26:13
 		ADDED from AndroidManifest.xml:27:17
 activity#com.indysoft.amazingtetris.SettingsActivity
 ADDED from AndroidManifest.xml:30:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:35:13
 	android:label
 		ADDED from AndroidManifest.xml:32:13
 	android:parentActivityName
