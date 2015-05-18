@@ -35,7 +35,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
     final int LEFT_DIRECTION = 3;
     int SPEED_NORMAL = 500;
     int SPEED_FAST = 50;
-    String difficulty = "a";
+    String difficulty;
     int score;
     boolean gameInProgress, gamePaused, fastSpeedState, currentShapeAlive;
 
@@ -344,10 +344,13 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     private boolean CreateShape() {
         // generate random shape to put on the gameMatrix
-        if (difficulty == "Normal")
+
+        if (difficulty.compareTo("Normal") == 0) {
             currentShape = shapes[random.nextInt(7)];
-        else
+        }
+        else {
             currentShape = shapes[random.nextInt(shapes.length)];
+        }
         // generate random number of rotations
         int number_of_rotations = random.nextInt(4);
         for (int i = 1; i <= number_of_rotations; ++i) {
