@@ -1352,7 +1352,7 @@
         <item>80</item>
     </string-array><string-array name="difficulty_preference_entries">
         <item>Normal</item>
-        <item>Hard</item>
+        <item>Hard (adds more shapes)</item>
     </string-array><string-array name="num_columns_preference_entryValues">
         <item>4</item>
         <item>8</item>

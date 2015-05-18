@@ -28,7 +28,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
     final int BOARD_HEIGHT = 800;
     final int BOARD_WIDTH = 400;
     final Handler handler = new Handler();
-    final Shape[] shapes = new Shape[7];
+    final Shape[] shapes = new Shape[11];
     final int UP_DIRECTION = 0;
     final int RIGHT_DIRECTION = 1;
     final int DOWN_DIRECTION = 2;
@@ -154,6 +154,28 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         shapes[6] = new Shape(a, Color.BLUE, BoardCell.BEHAVIOR_IS_FALLING);
         a[1][3] = a[2][3] = a[3][2] = a[3][3] = 0;
 
+        // hard mode
+
+        // .
+        a[2][2] = 1;
+        shapes[7] = new Shape(a, Color.WHITE, BoardCell.BEHAVIOR_IS_FALLING);
+        a[2][2] = 0;
+
+        // +
+        a[1][2] = a[2][1] = a[2][2] = a[2][3] = a[3][2] = 1;
+        shapes[8] = new Shape(a, Color.GRAY, BoardCell.BEHAVIOR_IS_FALLING);
+        a[1][2] = a[2][1] = a[2][2] = a[2][3] = a[3][2] = 0;
+
+        // big cube
+        for (int i = 1; i <= 4; ++ i) for (int j = 1; j <= 4; ++ j) a[i][j] = 1;
+        shapes[9] = new Shape(a, Color.rgb(117, 101, 57), BoardCell.BEHAVIOR_IS_FALLING);
+        for (int i = 1; i <= 4; ++ i) for (int j = 1; j <= 4; ++ j) a[i][j] = 0;
+
+        //big H
+        for (int i = 1; i <= 4; ++ i) for (int j = 1; j <= 4; ++ j) a[i][j] = 1;
+        a[1][2] = a[1][3] = a[4][2] = a[4][3] = 0;
+        shapes[10] = new Shape(a, Color.rgb(128, 158, 73), BoardCell.BEHAVIOR_IS_FALLING);
+        for (int i = 1; i <= 4; ++ i) for (int j = 1; j <= 4; ++ j) a[i][j] = 0;
     }
 
     private void CopyMatrix(BoardCell[][] A, BoardCell[][] B) {
@@ -322,7 +344,10 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     private boolean CreateShape() {
         // generate random shape to put on the gameMatrix
-        currentShape = shapes[random.nextInt(shapes.length)];
+        if (difficulty == "Normal")
+            currentShape = shapes[random.nextInt(7)];
+        else
+            currentShape = shapes[random.nextInt(shapes.length)];
         // generate random number of rotations
         int number_of_rotations = random.nextInt(4);
         for (int i = 1; i <= number_of_rotations; ++i) {
