@@ -10,6 +10,7 @@
     tools:context=".MainActivity"
     android:background="#ff72abff"
     android:weightSum="2"
+    android:configChanges="orientation|screenSize"
     android:orientation="horizontal">
 
     <LinearLayout

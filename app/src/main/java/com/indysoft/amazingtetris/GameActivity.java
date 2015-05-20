@@ -136,7 +136,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
         // O
         a[2][2] = a[2][3] = a[3][2] = a[3][3] = 1;
-        shapes[3] = new Shape(a, Color.YELLOW, BoardCell.BEHAVIOR_IS_FALLING);
+        shapes[3] = new Shape(a, Color.YELLOW, BoardCell.BEHAVIOR_IS_FALLING, false);
         a[2][2] = a[2][3] = a[3][2] = a[3][3] = 0;
 
         // T
@@ -158,17 +158,17 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
         // .
         a[2][2] = 1;
-        shapes[7] = new Shape(a, Color.WHITE, BoardCell.BEHAVIOR_IS_FALLING);
+        shapes[7] = new Shape(a, Color.WHITE, BoardCell.BEHAVIOR_IS_FALLING, false);
         a[2][2] = 0;
 
         // +
         a[1][2] = a[2][1] = a[2][2] = a[2][3] = a[3][2] = 1;
-        shapes[8] = new Shape(a, Color.GRAY, BoardCell.BEHAVIOR_IS_FALLING);
+        shapes[8] = new Shape(a, Color.GRAY, BoardCell.BEHAVIOR_IS_FALLING, false);
         a[1][2] = a[2][1] = a[2][2] = a[2][3] = a[3][2] = 0;
 
         // big cube
         for (int i = 1; i <= 4; ++ i) for (int j = 1; j <= 4; ++ j) a[i][j] = 1;
-        shapes[9] = new Shape(a, Color.rgb(117, 101, 57), BoardCell.BEHAVIOR_IS_FALLING);
+        shapes[9] = new Shape(a, Color.rgb(117, 101, 57), BoardCell.BEHAVIOR_IS_FALLING, false);
         for (int i = 1; i <= 4; ++ i) for (int j = 1; j <= 4; ++ j) a[i][j] = 0;
 
         //big H
@@ -792,6 +792,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
     public class Shape {
         public int x, y;
         public BoardCell[][] mat = new BoardCell[5][5];
+        public boolean canRotate;
 
         Shape() {
             for (int i = 0; i < 5; ++i) {
@@ -800,6 +801,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 }
             }
             x = y = 0;
+            canRotate = true;
         }
 
         Shape(int[][] _mat, int _color) {
@@ -813,6 +815,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 }
             }
             x = y = 0;
+            canRotate = true;
         }
 
         Shape(int[][] _mat, int _color, final int behavior){
@@ -825,6 +828,20 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
                 }
             }
+            canRotate = true;
+        }
+
+        Shape(int[][] _mat, int _color, final int behavior, boolean _canRotate){
+            for (int i = 0; i < 5; ++ i){
+                for (int j = 0; j < 5; ++ j){
+                    if (_mat[i][j] == 1)
+                        mat[i][j] = new BoardCell(_mat[i][j], _color, behavior);
+                    else
+                        mat[i][j] = new BoardCell();
+
+                }
+            }
+            canRotate = _canRotate;
         }
 
         Shape(int[][] _mat, int _color, int _x, int _y) {
@@ -839,11 +856,16 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             }
             x = _x;
             y = _y;
+            canRotate = true;
         }
 
 
 
         void RotateLeft() {
+            if (!this.canRotate){
+                return ;
+            }
+
             BoardCell[][] aux = new BoardCell[5][5];
             for (int i = 1; i < 5; ++i) {
                 for (int j = 1; j < 5; ++j) {
@@ -858,6 +880,10 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         }
 
         void RotateRight() {
+            if (!this.canRotate){
+                return ;
+            }
+            
             BoardCell[][] aux = new BoardCell[5][5];
             for (int i = 1; i < 5; ++i) {
                 for (int j = 1; j < 5; ++j) {

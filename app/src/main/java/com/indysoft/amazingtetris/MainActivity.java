@@ -3,6 +3,7 @@ package com.indysoft.amazingtetris;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.Editable;
@@ -11,7 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 
 public class MainActivity extends Activity {
 
@@ -22,11 +22,15 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        prefs.edit().putString("difficulty_preference", "Normal").apply();
-        prefs.edit().putString("num_rows_preference", "20").apply();
-        prefs.edit().putString("num_columns_preference", "10").apply();
-        prefs.edit().putString("speed_preference", "Normal").apply();
+        if (HelpSaveSettings.x == 0) {
+            HelpSaveSettings.x = 1;
+            prefs.edit().putString("difficulty_preference", "Normal").apply();
+            prefs.edit().putString("num_rows_preference", "20").apply();
+            prefs.edit().putString("num_columns_preference", "10").apply();
+            prefs.edit().putString("speed_preference", "Normal").apply();
+        }
 
 
         // Restore the player's name
@@ -106,13 +110,33 @@ public class MainActivity extends Activity {
     }
 
     @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+    }
+
+    @Override
+    protected  void onPause() {
+        super.onPause();
+        //Toast.makeText(this.getApplicationContext(), "onPause", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
     protected void onStop() {
         super.onStop();
 
         // Save the player's name between sessions
+       // Toast.makeText(this.getApplicationContext(), "onStop", Toast.LENGTH_SHORT).show();
         SharedPreferences settings = getSharedPreferences("Preferences", 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putString("playerName", playerName);
         editor.commit();
     }
+
+    @Override
+    protected void onDestroy() {
+        // TODO Auto-generated method stub
+        super.onDestroy();
+    }
 }
+
+
