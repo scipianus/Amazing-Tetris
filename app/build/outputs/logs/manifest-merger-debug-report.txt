@@ -71,30 +71,40 @@ ADDED from AndroidManifest.xml:30:9
 		ADDED from AndroidManifest.xml:34:13
 	android:name
 		ADDED from AndroidManifest.xml:31:13
-activity#com.indysoft.amazingtetris.HighScoresActivity
-ADDED from AndroidManifest.xml:40:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:45:13
+activity#com.indysoft.amazingtetris.SettingsHighscoresActivity
+ADDED from AndroidManifest.xml:41:9
 	android:label
-		ADDED from AndroidManifest.xml:42:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:43:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:44:13
-	android:name
-		ADDED from AndroidManifest.xml:41:13
-activity#com.indysoft.amazingtetris.GameActivity
-ADDED from AndroidManifest.xml:50:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:55:13
-	android:label
-		ADDED from AndroidManifest.xml:52:13
 	android:parentActivityName
-		ADDED from AndroidManifest.xml:53:13
+		ADDED from AndroidManifest.xml:44:13
 	android:configChanges
-		ADDED from AndroidManifest.xml:54:13
+		ADDED from AndroidManifest.xml:45:13
 	android:name
-		ADDED from AndroidManifest.xml:51:13
+		ADDED from AndroidManifest.xml:42:13
+activity#com.indysoft.amazingtetris.HighScoresActivity
+ADDED from AndroidManifest.xml:51:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:56:13
+	android:label
+		ADDED from AndroidManifest.xml:53:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:54:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:55:13
+	android:name
+		ADDED from AndroidManifest.xml:52:13
+activity#com.indysoft.amazingtetris.GameActivity
+ADDED from AndroidManifest.xml:61:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:66:13
+	android:label
+		ADDED from AndroidManifest.xml:63:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:64:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:65:13
+	android:name
+		ADDED from AndroidManifest.xml:62:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:22.1.1:20:5

@@ -883,7 +883,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             if (!this.canRotate){
                 return ;
             }
-            
+
             BoardCell[][] aux = new BoardCell[5][5];
             for (int i = 1; i < 5; ++i) {
                 for (int j = 1; j < 5; ++j) {

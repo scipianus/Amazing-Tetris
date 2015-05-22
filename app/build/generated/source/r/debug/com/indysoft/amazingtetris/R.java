@@ -23,12 +23,13 @@ public final class R {
     public static final class array {
         public static final int difficulty_preference_entries=0x7f070000;
         public static final int difficulty_preference_entryValues=0x7f070001;
-        public static final int num_columns_preference_entries=0x7f070002;
-        public static final int num_columns_preference_entryValues=0x7f070003;
-        public static final int num_rows_preference_entries=0x7f070004;
-        public static final int num_rows_preference_entryValues=0x7f070005;
-        public static final int speed_preference_entries=0x7f070006;
-        public static final int speed_preference_entryValues=0x7f070007;
+        public static final int difficulty_preference_highscores_entries=0x7f070002;
+        public static final int num_columns_preference_entries=0x7f070003;
+        public static final int num_columns_preference_entryValues=0x7f070004;
+        public static final int num_rows_preference_entries=0x7f070005;
+        public static final int num_rows_preference_entryValues=0x7f070006;
+        public static final int speed_preference_entries=0x7f070007;
+        public static final int speed_preference_entryValues=0x7f070008;
     }
     public static final class attr {
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -1521,8 +1522,11 @@ containing a value of this type.
         public static final int tetrislogo=0x7f02003b;
     }
     public static final class id {
+        public static final int ID_CELL=0x7f0b005b;
+        public static final int NAME_CELL=0x7f0b005c;
+        public static final int SCORE_CELL=0x7f0b005d;
         public static final int aboutTextView=0x7f0b004f;
-        public static final int about_button=0x7f0b0059;
+        public static final int about_button=0x7f0b005a;
         public static final int action_bar=0x7f0b0040;
         public static final int action_bar_activity_content=0x7f0b0000;
         public static final int action_bar_container=0x7f0b003f;
@@ -1536,7 +1540,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0b003d;
         public static final int action_mode_bar_stub=0x7f0b003c;
         public static final int action_mode_close_button=0x7f0b0025;
-        public static final int action_settings=0x7f0b005a;
+        public static final int action_settings=0x7f0b005e;
         public static final int activity_chooser_view_content=0x7f0b0026;
         public static final int alertTitle=0x7f0b0030;
         public static final int always=0x7f0b0016;
@@ -1559,20 +1563,21 @@ containing a value of this type.
         public static final int game_board=0x7f0b0050;
         public static final int game_score_textview=0x7f0b0051;
         public static final int highScoresTextView=0x7f0b0052;
-        public static final int high_scores_button=0x7f0b0057;
+        public static final int high_scores_button=0x7f0b0058;
         public static final int home=0x7f0b0004;
         public static final int homeAsUp=0x7f0b000d;
         public static final int icon=0x7f0b002b;
         public static final int ifRoom=0x7f0b0018;
         public static final int image=0x7f0b0028;
         public static final int listMode=0x7f0b0009;
+        public static final int listView_highscores=0x7f0b0053;
         public static final int list_item=0x7f0b002a;
-        public static final int logoImageView=0x7f0b0053;
+        public static final int logoImageView=0x7f0b0054;
         public static final int middle=0x7f0b0015;
         public static final int multiply=0x7f0b001e;
-        public static final int nameEditText=0x7f0b0056;
+        public static final int nameEditText=0x7f0b0057;
         public static final int never=0x7f0b0019;
-        public static final int new_game_button=0x7f0b0055;
+        public static final int new_game_button=0x7f0b0056;
         public static final int none=0x7f0b000e;
         public static final int normal=0x7f0b000a;
         public static final int parentPanel=0x7f0b002d;
@@ -1592,7 +1597,7 @@ containing a value of this type.
         public static final int search_src_text=0x7f0b0049;
         public static final int search_voice_btn=0x7f0b004d;
         public static final int select_dialog_listview=0x7f0b004e;
-        public static final int settings_button=0x7f0b0058;
+        public static final int settings_button=0x7f0b0059;
         public static final int shortcut=0x7f0b0039;
         public static final int showCustom=0x7f0b000f;
         public static final int showHome=0x7f0b0010;
@@ -1609,7 +1614,7 @@ containing a value of this type.
         public static final int topPanel=0x7f0b002e;
         public static final int up=0x7f0b0008;
         public static final int useLogo=0x7f0b0012;
-        public static final int welcomeTextView=0x7f0b0054;
+        public static final int welcomeTextView=0x7f0b0055;
         public static final int withText=0x7f0b001a;
         public static final int wrap_content=0x7f0b001d;
     }
@@ -1648,13 +1653,15 @@ containing a value of this type.
         public static final int activity_game=0x7f04001a;
         public static final int activity_highscores=0x7f04001b;
         public static final int activity_main=0x7f04001c;
-        public static final int select_dialog_item_material=0x7f04001d;
-        public static final int select_dialog_multichoice_material=0x7f04001e;
-        public static final int select_dialog_singlechoice_material=0x7f04001f;
-        public static final int support_simple_spinner_dropdown_item=0x7f040020;
+        public static final int rowtype_highscores=0x7f04001d;
+        public static final int select_dialog_item_material=0x7f04001e;
+        public static final int select_dialog_multichoice_material=0x7f04001f;
+        public static final int select_dialog_singlechoice_material=0x7f040020;
+        public static final int support_simple_spinner_dropdown_item=0x7f040021;
     }
     public static final class menu {
         public static final int menu_main=0x7f0f0000;
+        public static final int settings_highscores=0x7f0f0001;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
@@ -1979,6 +1986,7 @@ containing a value of this type.
     }
     public static final class xml {
         public static final int preferences=0x7f060000;
+        public static final int preferences_highscores=0x7f060001;
     }
     public static final class styleable {
         /** Attributes that can be used with a ActionBar.

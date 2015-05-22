@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:key="difficulty_preference_highscores"
+        android:title="Type of difficulty"
+        android:entries="@array/difficulty_preference_highscores_entries"
+        android:entryValues="@array/difficulty_preference_entryValues"
+        android:defaultValue="Normal"
+        />
+
+    <ListPreference
+        android:key="num_rows_preference_highscores"
+        android:title="Number of rows"
+        android:entries="@array/num_rows_preference_entries"
+        android:entryValues="@array/num_rows_preference_entryValues"
+        android:defaultValue="10"
+        />
+
+    <ListPreference
+        android:key="num_columns_preference_highscores"
+        android:title="Number of columns"
+        android:entries="@array/num_columns_preference_entries"
+        android:entryValues="@array/num_columns_preference_entryValues"
+        android:defaultValue="20"
+        />
+
+    <ListPreference
+        android:key="speed_preference_highscores"
+        android:title="Type of speed"
+        android:entries="@array/speed_preference_entries"
+        android:entryValues="@array/speed_preference_entryValues"
+        android:defaultValue="Normal"
+        />
+
+</PreferenceScreen>

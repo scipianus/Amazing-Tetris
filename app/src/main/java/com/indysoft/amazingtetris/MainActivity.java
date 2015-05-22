@@ -24,8 +24,8 @@ public class MainActivity extends Activity {
 
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        if (HelpSaveSettings.x == 0) {
-            HelpSaveSettings.x = 1;
+        if (HelpSaveSettings.saveSettingsApp == 0) {
+            HelpSaveSettings.saveSettingsApp = 1;
             prefs.edit().putString("difficulty_preference", "Normal").apply();
             prefs.edit().putString("num_rows_preference", "20").apply();
             prefs.edit().putString("num_columns_preference", "10").apply();
@@ -62,6 +62,7 @@ public class MainActivity extends Activity {
 
                     @Override
                     public void onClick(View view) {
+                        HelpSaveSettings.saveSettingsHighscores = 0;
                         MainActivity.this.startActivity(new Intent(MainActivity.this, HighScoresActivity.class));
                     }
                 });
