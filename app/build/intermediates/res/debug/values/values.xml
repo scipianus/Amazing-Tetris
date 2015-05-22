@@ -255,6 +255,7 @@
     <string name="high_scores_button_text">High scores</string>
     <string name="high_scores_string">High Scores</string>
     <string name="new_game_button_text">New game</string>
+    <string name="set_properties_highscores_button_text">Set properties</string>
     <string name="settings_button_text">Settings</string>
     <string name="welcome_string">Welcome,</string>
     <!-- From: file:/E:/Android%20Club/Amazing-Tetris-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->

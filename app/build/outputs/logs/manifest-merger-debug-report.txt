@@ -83,8 +83,6 @@ ADDED from AndroidManifest.xml:41:9
 		ADDED from AndroidManifest.xml:42:13
 activity#com.indysoft.amazingtetris.HighScoresActivity
 ADDED from AndroidManifest.xml:51:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:56:13
 	android:label
 		ADDED from AndroidManifest.xml:53:13
 	android:parentActivityName
