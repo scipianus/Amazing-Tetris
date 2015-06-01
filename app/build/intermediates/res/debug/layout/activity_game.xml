@@ -24,6 +24,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/game_score_string"
         android:id="@+id/game_score_textview"
+        android:longClickable="false"
+        android:clickable="false"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
@@ -36,7 +38,10 @@
         android:textAlignment="center"
         android:layout_centerInParent="true"
         android:textColor="#ffffffff"
-        android:textSize="30sp" />
+        android:longClickable="false"
+        android:clickable="false"
+        android:textSize="30sp"
+        android:background="#ff2b2b2b" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -47,8 +52,12 @@
         android:textAlignment="center"
         android:layout_centerInParent="true"
         android:textColor="#ffffffff"
+        android:longClickable="false"
+        android:clickable="false"
         android:layout_below="@+id/game_over_textview"
-        android:textSize="30dip"
-        android:textIsSelectable="true" />
+        android:textSize="30sp"
+        android:textIsSelectable="true"
+        android:background="#ff2b2b2b"
+        android:autoText="true" />
 </RelativeLayout>
-<!-- From: file:/E:/Android%20Club/Amazing-Tetris-master/app/src/main/res/layout/activity_game.xml -->
+<!-- From: file:/home/ciprian/AndroidStudioProjects/AmazingTetris/app/src/main/res/layout/activity_game.xml -->
