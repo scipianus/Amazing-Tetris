@@ -25,6 +25,7 @@
         android:text="@string/game_score_string"
         android:id="@+id/game_score_textview"
         android:longClickable="false"
+        android:textIsSelectable="false"
         android:clickable="false"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
@@ -41,6 +42,7 @@
         android:longClickable="false"
         android:clickable="false"
         android:textSize="30sp"
+        android:textIsSelectable="false"
         android:background="#ff2b2b2b" />
 
     <TextView
@@ -54,9 +56,9 @@
         android:textColor="#ffffffff"
         android:longClickable="false"
         android:clickable="false"
+        android:textIsSelectable="false"
         android:layout_below="@+id/game_over_textview"
         android:textSize="30sp"
-        android:textIsSelectable="true"
         android:background="#ff2b2b2b"
         android:autoText="true" />
 </RelativeLayout>
