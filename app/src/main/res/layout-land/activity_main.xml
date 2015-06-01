@@ -18,15 +18,23 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-        <ImageView
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/logoImageView"
-            android:src="@drawable/tetrislogo"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_gravity="center_vertical" />
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/logoImageView"
+                android:src="@drawable/tetrislogo"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center" />
+
+        </RelativeLayout>
+
 
     </LinearLayout>
 
@@ -34,18 +42,23 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:layout_weight="1">
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/welcome_string"
                 android:id="@+id/welcomeTextView"
+                android:layout_centerVertical="true"
                 android:textSize="30dp"
                 android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_vertical" />
 
             <EditText
                 android:layout_width="wrap_content"
@@ -57,10 +70,9 @@
                 android:textSize="30dp"
                 android:id="@+id/nameEditText"
                 android:layout_gravity="center_vertical"
+                android:maxLength="30"
                 android:layout_below="@+id/welcomeTextView"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:maxLength="30" />
+                android:layout_centerHorizontal="true" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -68,8 +80,10 @@
                 android:text="@string/new_game_button_text"
                 android:id="@+id/new_game_button"
                 android:textSize="20dp"
+                android:layout_centerVertical="true"
                 android:layout_alignLeft="@+id/welcomeTextView"
                 android:layout_alignStart="@+id/welcomeTextView"
+                android:layout_gravity="center_vertical"
                 android:layout_below="@+id/nameEditText"
                 android:layout_alignRight="@+id/welcomeTextView"
                 android:layout_alignEnd="@+id/welcomeTextView" />
@@ -79,7 +93,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/high_scores_button_text"
                 android:id="@+id/high_scores_button"
+                android:layout_centerVertical="true"
                 android:textSize="20dp"
+                android:layout_gravity="center_vertical"
                 android:layout_below="@+id/new_game_button"
                 android:layout_centerHorizontal="true" />
 
@@ -88,7 +104,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/settings_button_text"
                 android:id="@+id/settings_button"
+                android:layout_centerVertical="true"
                 android:textSize="20dp"
+                android:layout_gravity="center_vertical"
                 android:layout_below="@+id/high_scores_button"
                 android:layout_centerHorizontal="true" />
 
@@ -98,7 +116,8 @@
                 android:text="@string/about_button_text"
                 android:id="@+id/about_button"
                 android:textSize="20dp"
-                android:layout_gravity="bottom"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
                 android:layout_below="@+id/settings_button"
                 android:layout_centerHorizontal="true" />
         </RelativeLayout>
