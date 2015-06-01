@@ -11,7 +11,23 @@
     <string name="game_score_string">Score: 0</string>
     <string name="welcome_string">Welcome,</string>
     <string name="settings_button_text">Settings</string>
-    <string name="set_properties_highscores_button_text">Set properties</string>
+    <string name="set_properties_highscores_button_text">High Scores filters</string>
     <string name="game_over_textview_string">GAME OVER</string>
     <string name="game_over_textview_string2">Tap to play again</string>
+    <string name="developers_string">Developers:</string>
+    <string name="developer1_string">Olariu Ciprian</string>
+    <string name="developer2_string">Trifan Mircea-Mihai</string>
+    <string name="instructions_string">Instructions:</string>
+    <string name="gesture1_string">Swipe Up</string>
+    <string name="gesture2_string">Swipe Left</string>
+    <string name="gesture3_string">Swipe Right</string>
+    <string name="gesture4_string">Swipe Down</string>
+    <string name="gesture5_string">Tap on left half</string>
+    <string name="gesture6_string">Tap on right half</string>
+    <string name="gestureeffect1_string">Pause/Resume</string>
+    <string name="gestureeffect2_string">Move Left</string>
+    <string name="gestureeffect3_string">Move Right</string>
+    <string name="gestureeffect4_string">Fast Fall</string>
+    <string name="gestureeffect5_string">Rotate Left</string>
+    <string name="gestureeffect6_string">Rotate Right</string>
 </resources>

@@ -46,7 +46,7 @@ public class HighScoresActivity extends Activity {
 
         if (cursor == null || cursor.getCount() == 0) {
             mMap = new HashMap<String, String>();
-            mMap.put("ID", "N/A");
+            mMap.put("ID", "1");
             mMap.put("Name", "N/A");
             mMap.put("Score", "N/A");
             mList.add(mMap);
