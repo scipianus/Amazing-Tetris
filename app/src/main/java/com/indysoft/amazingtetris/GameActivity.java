@@ -1,6 +1,7 @@
 package com.indysoft.amazingtetris;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -8,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
@@ -35,7 +37,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
     final int LEFT_DIRECTION = 3;
     int SPEED_NORMAL = 500;
     int SPEED_FAST = 50;
-    String difficulty;
+    String difficulty, speed;
     int score;
     boolean gameInProgress, gamePaused, fastSpeedState, currentShapeAlive;
 
@@ -64,26 +66,24 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         difficulty = prefs.getString("difficulty_preference", "Normal");
         NUM_ROWS = Integer.parseInt(prefs.getString("num_rows_preference", "20")) + 6;
         NUM_COLUMNS = Integer.parseInt(prefs.getString("num_columns_preference", "10")) + 6;
-        String speed = prefs.getString("speed_preference", "Normal");
-        switch (speed){
-            case "Slow":{
+        speed = prefs.getString("speed_preference", "Normal");
+        switch (speed) {
+            case "Slow": {
                 SPEED_NORMAL = 1000;
                 SPEED_FAST = 100;
                 break;
             }
-            case "Normal":{
+            case "Normal": {
                 SPEED_NORMAL = 500;
                 SPEED_FAST = 50;
                 break;
             }
-            case "Fast":{
+            case "Fast": {
                 SPEED_NORMAL = 250;
                 SPEED_FAST = 25;
                 break;
             }
         }
-
-
 
 
         bitmap = Bitmap.createBitmap(BOARD_WIDTH, BOARD_HEIGHT, Bitmap.Config.ARGB_8888);
@@ -167,15 +167,15 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         a[1][2] = a[2][1] = a[2][2] = a[2][3] = a[3][2] = 0;
 
         // big cube
-        for (int i = 1; i <= 4; ++ i) for (int j = 1; j <= 4; ++ j) a[i][j] = 1;
+        for (int i = 1; i <= 4; ++i) for (int j = 1; j <= 4; ++j) a[i][j] = 1;
         shapes[9] = new Shape(a, Color.rgb(117, 101, 57), BoardCell.BEHAVIOR_IS_FALLING, false);
-        for (int i = 1; i <= 4; ++ i) for (int j = 1; j <= 4; ++ j) a[i][j] = 0;
+        for (int i = 1; i <= 4; ++i) for (int j = 1; j <= 4; ++j) a[i][j] = 0;
 
         //big H
-        for (int i = 1; i <= 4; ++ i) for (int j = 1; j <= 4; ++ j) a[i][j] = 1;
+        for (int i = 1; i <= 4; ++i) for (int j = 1; j <= 4; ++j) a[i][j] = 1;
         a[1][2] = a[1][3] = a[4][2] = a[4][3] = 0;
         shapes[10] = new Shape(a, Color.rgb(128, 158, 73), BoardCell.BEHAVIOR_IS_FALLING);
-        for (int i = 1; i <= 4; ++ i) for (int j = 1; j <= 4; ++ j) a[i][j] = 0;
+        for (int i = 1; i <= 4; ++i) for (int j = 1; j <= 4; ++j) a[i][j] = 0;
     }
 
     private void CopyMatrix(BoardCell[][] A, BoardCell[][] B) {
@@ -186,22 +186,22 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         }
     }
 
-    private void FixGameMatrix(){
-        for (int i = 3; i < NUM_ROWS - 3; ++ i){
-            for (int j = 3; j < NUM_COLUMNS - 3; ++ j){
-                if (gameMatrix[i][j].getState() == 0){
+    private void FixGameMatrix() {
+        for (int i = 3; i < NUM_ROWS - 3; ++i) {
+            for (int j = 3; j < NUM_COLUMNS - 3; ++j) {
+                if (gameMatrix[i][j].getState() == 0) {
                     gameMatrix[i][j].setColor(Color.BLACK);
                     gameMatrix[i][j].setBehavior(BoardCell.BEHAVIOR_NOTHING);
                     continue;
                 }
                 if (gameMatrix[i][j].getBehavior() == BoardCell.BEHAVIOR_IS_FIXED)
                     continue;
-                if (gameMatrix[i][j].getBehavior() == BoardCell.BEHAVIOR_IS_FALLING){
+                if (gameMatrix[i][j].getBehavior() == BoardCell.BEHAVIOR_IS_FALLING) {
                     int ind, jnd, ii, jj;
-                    for (ind = 1, ii = currentShape.x; ind <= 4; ++ ind, ++ ii){
-                        for (jnd = 1, jj = currentShape.y; jnd <= 4; ++ jnd, ++ jj){
-                            if (ii == i && jj == j){
-                                if (currentShape.mat[ind][jnd].getState() == 0){
+                    for (ind = 1, ii = currentShape.x; ind <= 4; ++ind, ++ii) {
+                        for (jnd = 1, jj = currentShape.y; jnd <= 4; ++jnd, ++jj) {
+                            if (ii == i && jj == j) {
+                                if (currentShape.mat[ind][jnd].getState() == 0) {
                                     gameMatrix[i][j] = new BoardCell();
                                 }
                             }
@@ -209,12 +209,12 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                     }
                     continue;
                 }
-                if (gameMatrix[i][j].getBehavior() == BoardCell.BEHAVIOR_NOTHING){
+                if (gameMatrix[i][j].getBehavior() == BoardCell.BEHAVIOR_NOTHING) {
                     int ind, jnd, ii, jj;
-                    for (ind = 1, ii = currentShape.x; ind <= 4; ++ ind, ++ ii){
-                        for (jnd = 1, jj = currentShape.y; jnd <= 4; ++ jnd, ++ jj){
-                            if (ii == i && jj == j){
-                                if (currentShape.mat[ind][jnd].getState() == 1){
+                    for (ind = 1, ii = currentShape.x; ind <= 4; ++ind, ++ii) {
+                        for (jnd = 1, jj = currentShape.y; jnd <= 4; ++jnd, ++jj) {
+                            if (ii == i && jj == j) {
+                                if (currentShape.mat[ind][jnd].getState() == 1) {
                                     gameMatrix[i][j] = currentShape.mat[ind][jnd];
                                 }
                             }
@@ -347,8 +347,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
         if (difficulty.compareTo("Normal") == 0) {
             currentShape = shapes[random.nextInt(7)];
-        }
-        else {
+        } else {
             currentShape = shapes[random.nextInt(shapes.length)];
         }
         // generate random number of rotations
@@ -510,6 +509,18 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         textView.setText("Score: " + score);
     }
 
+    private void InsertScore() {
+        ContentValues values = new ContentValues();
+        values.put(HighScoresDb.KEY_NAME, MainActivity.playerName);
+        values.put(HighScoresDb.KEY_SCORE, Integer.toString(score));
+        values.put(HighScoresDb.KEY_DIFFICULTY, difficulty);
+        values.put(HighScoresDb.KEY_NUMROWS, Integer.toString(NUM_ROWS - 6));
+        values.put(HighScoresDb.KEY_NUMCOLUMNS, Integer.toString(NUM_COLUMNS - 6));
+        values.put(HighScoresDb.KEY_SPEED, speed);
+
+        Uri uri = getContentResolver().insert(HighScoresContentProvider.CONTENT_URI, values);
+    }
+
     private Runnable runnable = new Runnable() {
         @Override
         public void run() {
@@ -531,9 +542,9 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             if (!moved) { // current shape is down
                 // mark the new cells as fixed so they won't be affected by eventual bugs
                 int ind, jnd, i, j;
-                for (ind = 1, i = currentShape.x; ind <= 4; ++ ind, ++ i){
-                    for (jnd = 1, j = currentShape.y; jnd <= 4; ++ jnd, ++ j){
-                        if (currentShape.mat[ind][jnd].getState() == 1){
+                for (ind = 1, i = currentShape.x; ind <= 4; ++ind, ++i) {
+                    for (jnd = 1, j = currentShape.y; jnd <= 4; ++jnd, ++j) {
+                        if (currentShape.mat[ind][jnd].getState() == 1) {
                             gameMatrix[i][j].setBehavior(BoardCell.BEHAVIOR_IS_FIXED);
                             currentShape.mat[ind][jnd].setBehavior(BoardCell.BEHAVIOR_IS_FIXED);
                         }
@@ -546,6 +557,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
                 {
                     gameInProgress = false;
                     PaintMatrix();
+                    InsertScore();
                     return;
                 }
                 PaintMatrix();
@@ -605,7 +617,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             }
         }
 
-        for (int j = 3; j < NUM_COLUMNS - 3; ++ j){
+        for (int j = 3; j < NUM_COLUMNS - 3; ++j) {
             gameMatrix[NUM_ROWS - 4][j] = new BoardCell(gameMatrix[NUM_ROWS - 4][j].getState(), gameMatrix[NUM_ROWS - 4][j].getColor(), BoardCell.BEHAVIOR_IS_FIXED);
         }
 
@@ -762,7 +774,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             this.behavior = BEHAVIOR_NOTHING;
         }
 
-        public BoardCell(int state, int color, int behavior){
+        public BoardCell(int state, int color, int behavior) {
             this.state = state;
             this.color = color;
             this.behavior = behavior;
@@ -776,7 +788,9 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             return color;
         }
 
-        public int getBehavior() {return behavior;}
+        public int getBehavior() {
+            return behavior;
+        }
 
         public void setState(int state) {
             this.state = state;
@@ -786,7 +800,9 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             this.color = color;
         }
 
-        public void setBehavior(int behavior) {this.behavior = behavior;}
+        public void setBehavior(int behavior) {
+            this.behavior = behavior;
+        }
     }
 
     public class Shape {
@@ -818,9 +834,9 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             canRotate = true;
         }
 
-        Shape(int[][] _mat, int _color, final int behavior){
-            for (int i = 0; i < 5; ++ i){
-                for (int j = 0; j < 5; ++ j){
+        Shape(int[][] _mat, int _color, final int behavior) {
+            for (int i = 0; i < 5; ++i) {
+                for (int j = 0; j < 5; ++j) {
                     if (_mat[i][j] == 1)
                         mat[i][j] = new BoardCell(_mat[i][j], _color, behavior);
                     else
@@ -831,9 +847,9 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             canRotate = true;
         }
 
-        Shape(int[][] _mat, int _color, final int behavior, boolean _canRotate){
-            for (int i = 0; i < 5; ++ i){
-                for (int j = 0; j < 5; ++ j){
+        Shape(int[][] _mat, int _color, final int behavior, boolean _canRotate) {
+            for (int i = 0; i < 5; ++i) {
+                for (int j = 0; j < 5; ++j) {
                     if (_mat[i][j] == 1)
                         mat[i][j] = new BoardCell(_mat[i][j], _color, behavior);
                     else
@@ -860,10 +876,9 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         }
 
 
-
         void RotateLeft() {
-            if (!this.canRotate){
-                return ;
+            if (!this.canRotate) {
+                return;
             }
 
             BoardCell[][] aux = new BoardCell[5][5];
@@ -880,8 +895,8 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         }
 
         void RotateRight() {
-            if (!this.canRotate){
-                return ;
+            if (!this.canRotate) {
+                return;
             }
 
             BoardCell[][] aux = new BoardCell[5][5];

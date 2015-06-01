@@ -72,37 +72,49 @@ ADDED from AndroidManifest.xml:30:9
 	android:name
 		ADDED from AndroidManifest.xml:31:13
 activity#com.indysoft.amazingtetris.SettingsHighscoresActivity
-ADDED from AndroidManifest.xml:41:9
+ADDED from AndroidManifest.xml:40:9
 	android:label
-		ADDED from AndroidManifest.xml:43:13
-	android:parentActivityName
-		ADDED from AndroidManifest.xml:44:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:45:13
-	android:name
 		ADDED from AndroidManifest.xml:42:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:43:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:44:13
+	android:name
+		ADDED from AndroidManifest.xml:41:13
 activity#com.indysoft.amazingtetris.HighScoresActivity
-ADDED from AndroidManifest.xml:51:9
+ADDED from AndroidManifest.xml:49:9
 	android:label
-		ADDED from AndroidManifest.xml:53:13
+		ADDED from AndroidManifest.xml:51:13
 	android:parentActivityName
-		ADDED from AndroidManifest.xml:54:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:55:13
-	android:name
 		ADDED from AndroidManifest.xml:52:13
-activity#com.indysoft.amazingtetris.GameActivity
-ADDED from AndroidManifest.xml:61:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:66:13
-	android:label
-		ADDED from AndroidManifest.xml:63:13
-	android:parentActivityName
-		ADDED from AndroidManifest.xml:64:13
 	android:configChanges
-		ADDED from AndroidManifest.xml:65:13
+		ADDED from AndroidManifest.xml:53:13
 	android:name
+		ADDED from AndroidManifest.xml:50:13
+activity#com.indysoft.amazingtetris.GameActivity
+ADDED from AndroidManifest.xml:58:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:63:13
+	android:label
+		ADDED from AndroidManifest.xml:60:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:61:13
+	android:configChanges
 		ADDED from AndroidManifest.xml:62:13
+	android:name
+		ADDED from AndroidManifest.xml:59:13
+provider#com.indysoft.amazingtetris.HighScoresContentProvider
+ADDED from AndroidManifest.xml:69:9
+	android:readPermission
+		ADDED from AndroidManifest.xml:72:13
+	android:authorities
+		ADDED from AndroidManifest.xml:74:13
+	android:exported
+		ADDED from AndroidManifest.xml:71:13
+	android:name
+		ADDED from AndroidManifest.xml:70:13
+	android:writePermission
+		ADDED from AndroidManifest.xml:73:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:22.1.1:20:5

@@ -59,7 +59,8 @@
                 android:layout_gravity="center_vertical"
                 android:layout_below="@+id/welcomeTextView"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:maxLength="30" />
 
             <Button
                 android:layout_width="wrap_content"

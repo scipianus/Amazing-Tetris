@@ -70,6 +70,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.indysoft.amazingtetris.MainActivity" />
         </activity>
+
+        <provider
+            android:name="com.indysoft.amazingtetris.HighScoresContentProvider"
+            android:authorities="com.indysoft.amazingtetris.contentprovider"
+            android:exported="true"
+            android:readPermission="true"
+            android:writePermission="true" />
     </application>
 
 </manifest>

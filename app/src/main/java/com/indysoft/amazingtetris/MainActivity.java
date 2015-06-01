@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-    public String playerName;
+    public static String playerName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +46,9 @@ public class MainActivity extends Activity {
 
                     @Override
                     public void onClick(View view) {
-                        if (playerName.isEmpty()){
+                        if (playerName.isEmpty()) {
                             Toast.makeText(newGameButton.getContext(), "Please insert a name!", Toast.LENGTH_SHORT).show();
-                        }
-                        else{
+                        } else {
                             MainActivity.this.startActivity(new Intent(MainActivity.this, GameActivity.class));
                         }
                     }
@@ -83,7 +82,7 @@ public class MainActivity extends Activity {
         settingsButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
-                    public void onClick(View view){
+                    public void onClick(View view) {
                         MainActivity.this.startActivity(new Intent(MainActivity.this, SettingsActivity.class));
                     }
                 });
@@ -116,7 +115,7 @@ public class MainActivity extends Activity {
     }
 
     @Override
-    protected  void onPause() {
+    protected void onPause() {
         super.onPause();
         //Toast.makeText(this.getApplicationContext(), "onPause", Toast.LENGTH_SHORT).show();
     }
@@ -126,7 +125,7 @@ public class MainActivity extends Activity {
         super.onStop();
 
         // Save the player's name between sessions
-       // Toast.makeText(this.getApplicationContext(), "onStop", Toast.LENGTH_SHORT).show();
+        // Toast.makeText(this.getApplicationContext(), "onStop", Toast.LENGTH_SHORT).show();
         SharedPreferences settings = getSharedPreferences("Preferences", 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putString("playerName", playerName);
