@@ -12,4 +12,6 @@
     <string name="welcome_string">Welcome,</string>
     <string name="settings_button_text">Settings</string>
     <string name="set_properties_highscores_button_text">Set properties</string>
+    <string name="game_over_textview_string">GAME OVER</string>
+    <string name="game_over_textview_string2">Tap to play again</string>
 </resources>

@@ -26,5 +26,29 @@
         android:id="@+id/game_score_textview"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/game_over_textview_string"
+        android:id="@+id/game_over_textview"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"
+        android:textColor="#ffffffff"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/game_over_textview_string2"
+        android:id="@+id/game_over_textview2"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"
+        android:textColor="#ffffffff"
+        android:layout_below="@+id/game_over_textview"
+        android:textSize="30dip"
+        android:textIsSelectable="true" />
 </RelativeLayout>
 <!-- From: file:/home/ciprian/AndroidStudioProjects/AmazingTetris/app/src/main/res/layout/activity_game.xml -->

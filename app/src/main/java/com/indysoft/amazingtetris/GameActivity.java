@@ -17,6 +17,7 @@ import android.support.v4.view.GestureDetectorCompat;
 import android.view.Display;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -85,6 +86,10 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             }
         }
 
+        TextView textView = (TextView) findViewById(R.id.game_over_textview);
+        textView.setVisibility(View.INVISIBLE);
+        TextView textView2 = (TextView) findViewById(R.id.game_over_textview2);
+        textView2.setVisibility(View.INVISIBLE);
 
         bitmap = Bitmap.createBitmap(BOARD_WIDTH, BOARD_HEIGHT, Bitmap.Config.ARGB_8888);
         canvas = new Canvas(bitmap);
@@ -490,10 +495,10 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
         }
 
         if (!gameInProgress) {
-            paint.setColor(Color.WHITE);
-            paint.setTextAlign(Paint.Align.CENTER);
-            paint.setTextSize(60);
-            canvas.drawText("GAME OVER", (float) (BOARD_WIDTH / 2.0), (float) (BOARD_HEIGHT / 2.0), paint);
+            TextView textView = (TextView) findViewById(R.id.game_over_textview);
+            textView.setVisibility(View.VISIBLE);
+            TextView textView2 = (TextView) findViewById(R.id.game_over_textview2);
+            textView2.setVisibility(View.VISIBLE);
         } else if (gamePaused) {
             paint.setColor(Color.WHITE);
             paint.setTextAlign(Paint.Align.CENTER);
@@ -663,7 +668,11 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
     @Override
     public boolean onSingleTapUp(MotionEvent e) {
-        if (!gameInProgress || gamePaused || !currentShapeAlive)
+        if (!gameInProgress) {
+            finish();
+            return true;
+        }
+        if (gamePaused || !currentShapeAlive)
             return false;
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
