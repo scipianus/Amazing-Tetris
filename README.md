@@ -4,6 +4,6 @@ Authors : [Ciprian Olariu (scipianus)](https://github.com/scipianus), [Mircea Mi
 
 Presentation : [Google Slides](https://docs.google.com/presentation/d/1ZaLlgYVkdUS5ozvCAtkLDqu4wJ1UK00iab1vyHss-dA/edit?usp=sharing)
 
-Android app made as final project for the Udacity's Android course held at Android Student Club @ UNIBUC by Google Student Ambassador
+Android app made as final project for the Udacity's Android course held at Android Student Club @ University of Bucharest by Google Student Ambassador
 
 ![Screenshot](http://s18.postimg.org/opwe8r8h5/IMG_20150524_WA0004.jpg)
