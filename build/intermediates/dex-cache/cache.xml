@@ -16,18 +16,18 @@
         <dex dex="/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/pre-dexed/debug/support-annotations-22.1.1-438d5fa195cc63d38c36e6af35132b9f3a090d76.jar" />
     </item>
     <item
-        jar="/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/pre-dexed/debug/classes-5c38d89af1e417779a30fa8e2b29ea11e945cd7d.jar" />
-    </item>
-    <item
         jar="/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/libs/internal_impl-22.1.1.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
         <dex dex="/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-0744a20393bf197617f0c70c9e90df7434d027ac.jar" />
+    </item>
+    <item
+        jar="/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="/home/ciprian/AndroidStudioProjects/AmazingTetris/app/build/intermediates/pre-dexed/debug/classes-5c38d89af1e417779a30fa8e2b29ea11e945cd7d.jar" />
     </item>
 
 </items>
